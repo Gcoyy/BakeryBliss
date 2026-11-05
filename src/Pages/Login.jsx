@@ -109,43 +109,25 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-[#AF524D] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#DFAD56] rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E2D2A2] rounded-full blur-3xl"></div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-10 left-10 animate-bounce">
-        <div className="w-6 h-6 bg-[#DFAD56] rounded-full opacity-60"></div>
-      </div>
-      <div className="absolute top-20 right-20 animate-pulse">
-        <div className="w-4 h-4 bg-[#AF524D] rounded-full opacity-40"></div>
-      </div>
-      <div className="absolute bottom-20 left-20 animate-bounce delay-1000">
-        <div className="w-8 h-8 bg-[#E2D2A2] rounded-full opacity-50"></div>
-      </div>
+    <div className="flex min-h-screen items-center justify-center bg-patisserie-vanilla p-4">
 
       <div className="w-full max-w-md relative z-10">
         {/* Main Card */}
-        <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+        <div className="overflow-hidden rounded-3xl border border-patisserie-blush bg-white shadow-lg">
           {/* Header Section */}
-          <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-8 text-center relative">
-            <div className="absolute inset-0 bg-black/10"></div>
-            <div className="relative z-10">
+          <div className="bg-patisserie-blush p-8 text-center">
+            <div>
               {/* Logo */}
               <div className="w-20 h-20 mx-auto mb-4 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center relative">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#AF524D] to-[#8B3A3A] rounded-lg relative">
-                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-b-2 border-transparent border-b-[#DFAD56]"></div>
-                    <div className="absolute top-1 left-1 right-1 h-1 bg-[#E2D2A2] rounded-sm"></div>
+                  <div className="w-8 h-8 bg-patisserie-rose rounded-lg relative">
+                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-b-2 border-transparent border-b-[#E8CDAA]"></div>
+                    <div className="absolute top-1 left-1 right-1 h-1 bg-[#E8CDAA] rounded-sm"></div>
                   </div>
                 </div>
               </div>
-              <h1 className="text-3xl font-abhaya font-bold text-white mb-2">Welcome Back</h1>
-              <p className="text-white/80 text-sm">Sign in to your account</p>
+              <h1 className="mb-2 font-abhaya text-3xl font-bold text-patisserie-cocoa">Welcome Back</h1>
+              <p className="text-sm text-patisserie-cocoa/75">Sign in to your account</p>
             </div>
           </div>
 
@@ -154,7 +136,7 @@ const Login = () => {
             <form onSubmit={handleLogin} className="space-y-6">
               {/* Email Field */}
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-semibold text-[#492220]">
+                <label htmlFor="email" className="block text-sm font-semibold text-[#754B45]">
                   Email Address
                 </label>
                 <div className="relative">
@@ -164,11 +146,11 @@ const Login = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
+                    className="w-full px-4 py-3 bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
                     placeholder="Enter your email"
                   />
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <svg className="w-5 h-5 text-[#AF524D]/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-patisserie-rose-strong/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                     </svg>
                   </div>
@@ -177,7 +159,7 @@ const Login = () => {
 
               {/* Password Field */}
               <div className="space-y-2">
-                <label htmlFor="password" className="block text-sm font-semibold text-[#492220]">
+                <label htmlFor="password" className="block text-sm font-semibold text-[#754B45]">
                   Password
                 </label>
                 <div className="relative">
@@ -187,12 +169,12 @@ const Login = () => {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50 pr-12"
+                    className="w-full px-4 py-3 bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50 pr-12"
                     placeholder="Enter your password"
                   />
                   <button
                     type="button"
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-[#AF524D]/60 hover:text-[#AF524D] transition-colors"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-patisserie-rose-strong/60 hover:text-patisserie-rose-strong transition-colors"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -214,14 +196,14 @@ const Login = () => {
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-4 h-4 text-[#AF524D] bg-white border-[#AF524D]/30 rounded focus:ring-[#AF524D]/20"
+                    className="w-4 h-4 text-patisserie-rose-strong bg-white border-[#D98F91]/30 rounded focus:ring-[#D98F91]/20"
                   />
-                  <span className="text-sm text-[#492220]">Remember me</span>
+                  <span className="text-sm text-[#754B45]">Remember me</span>
                 </label>
                 <button
                   type="button"
                   onClick={() => setShowForgotPassword(true)}
-                  className="text-sm text-[#AF524D] hover:text-[#8B3A3A] transition-colors"
+                  className="text-sm text-patisserie-rose-strong hover:text-[#754B45] transition-colors"
                 >
                   Forgot password?
                 </button>
@@ -231,7 +213,7 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white font-semibold py-3 px-4 rounded-xl hover:from-[#8B3A3A] hover:to-[#AF524D] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full bg-patisserie-rose-strong text-white font-semibold py-3 px-4 rounded-xl hover:bg-patisserie-cocoa transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 {loading ? (
                   <div className="flex items-center justify-center">
@@ -249,10 +231,10 @@ const Login = () => {
               {/* Divider */}
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-[#AF524D]/20"></div>
+                  <div className="w-full border-t border-[#D98F91]/20"></div>
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-4 bg-white text-[#492220]/60">Or continue with</span>
+                  <span className="px-4 bg-white text-[#754B45]/60">Or continue with</span>
                 </div>
               </div>
 
@@ -261,7 +243,7 @@ const Login = () => {
                 type="button"
                 onClick={handleGoogleSignIn}
                 disabled={loading}
-                className="w-full bg-white text-[#492220] font-medium py-3 px-4 rounded-xl border border-[#AF524D]/20 hover:border-[#AF524D]/40 hover:bg-gray-50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
+                className="w-full bg-white text-[#754B45] font-medium py-3 px-4 rounded-xl border border-[#D98F91]/20 hover:border-[#D98F91]/40 hover:bg-gray-50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -274,11 +256,11 @@ const Login = () => {
 
               {/* Sign Up Link */}
               <div className="text-center">
-                <p className="text-sm text-[#492220]/70">
+                <p className="text-sm text-[#754B45]/70">
                   Don't have an account?{' '}
                   <Link
                     to="/signup"
-                    className="font-semibold text-[#AF524D] hover:text-[#8B3A3A] transition-colors"
+                    className="font-semibold text-patisserie-rose-strong hover:text-[#754B45] transition-colors"
                   >
                     Sign up
                   </Link>
@@ -294,7 +276,7 @@ const Login = () => {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 w-full max-w-md overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-6 text-center relative">
+            <div className="bg-patisserie-blush p-6 text-center relative">
               <div className="absolute inset-0 bg-black/10"></div>
               <div className="relative z-10">
                 <div className="w-12 h-12 mx-auto mb-3 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -302,8 +284,8 @@ const Login = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-abhaya font-bold text-white">Reset Password</h3>
-                <p className="text-white/80 text-sm mt-1">Enter your email to receive reset instructions</p>
+                <h3 className="font-abhaya text-xl font-bold text-patisserie-cocoa">Reset Password</h3>
+                <p className="mt-1 text-sm text-patisserie-cocoa/75">Enter your email to receive reset instructions</p>
               </div>
               <button
                 onClick={() => {
@@ -312,7 +294,7 @@ const Login = () => {
                   setResetMessage("");
                   setError("");
                 }}
-                className="absolute top-4 right-4 text-white/60 hover:text-white text-2xl font-bold cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+                className="absolute right-4 top-4 cursor-pointer text-2xl font-bold text-patisserie-cocoa/60 transition-colors duration-200 hover:scale-110 hover:text-patisserie-cocoa"
               >
                 ×
               </button>
@@ -322,7 +304,7 @@ const Login = () => {
             <div className="p-6">
               <form onSubmit={handleForgotPassword} className="space-y-4">
                 <div className="space-y-2">
-                  <label htmlFor="resetEmail" className="block text-sm font-semibold text-[#492220]">
+                  <label htmlFor="resetEmail" className="block text-sm font-semibold text-[#754B45]">
                     Email Address
                   </label>
                   <input
@@ -331,7 +313,7 @@ const Login = () => {
                     required
                     value={resetEmail}
                     onChange={(e) => setResetEmail(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
+                    className="w-full px-4 py-3 bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -345,14 +327,14 @@ const Login = () => {
                       setResetMessage("");
                       setError("");
                     }}
-                    className="flex-1 px-4 py-3 text-[#492220] border border-[#AF524D]/30 rounded-xl hover:bg-[#AF524D]/10 hover:border-[#AF524D]/50 transition-all duration-200 text-sm font-medium"
+                    className="flex-1 px-4 py-3 text-[#754B45] border border-[#D98F91]/30 rounded-xl hover:bg-[#D98F91]/10 hover:border-[#D98F91]/50 transition-all duration-200 text-sm font-medium"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={resetLoading}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white rounded-xl hover:from-[#8B3A3A] hover:to-[#AF524D] transition-all duration-300 disabled:opacity-50 text-sm font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    className="flex-1 px-4 py-3 bg-patisserie-rose-strong text-white rounded-xl hover:bg-patisserie-cocoa transition-all duration-300 disabled:opacity-50 text-sm font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     {resetLoading ? (
                       <div className="flex items-center justify-center">

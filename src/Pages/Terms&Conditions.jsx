@@ -1,26 +1,10 @@
 const TermsConditions = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] relative overflow-hidden py-10">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-20 left-20 w-32 h-32 bg-[#AF524D] rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#DFAD56] rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E2D2A2] rounded-full blur-3xl"></div>
-            </div>
+        <div className="min-h-screen bg-patisserie-vanilla relative overflow-hidden py-10">
 
-            {/* Floating Elements */}
-            <div className="absolute top-10 left-10 animate-bounce">
-                <div className="w-6 h-6 bg-[#DFAD56] rounded-full opacity-60"></div>
-            </div>
-            <div className="absolute top-20 right-20 animate-pulse">
-                <div className="w-4 h-4 bg-[#AF524D] rounded-full opacity-40"></div>
-            </div>
-            <div className="absolute bottom-20 left-20 animate-bounce delay-1000">
-                <div className="w-8 h-8 bg-[#E2D2A2] rounded-full opacity-50"></div>
-            </div>
 
             <main className="max-w-4xl mx-auto p-6 sm:p-10 bg-white shadow-lg rounded-2xl">
-                <h1 className="text-3xl sm:text-4xl font-bold text-center text-amber-800 mb-2">
+                <h1 className="text-3xl sm:text-4xl font-bold text-center text-patisserie-cocoa mb-2">
                     Terms and Conditions – Connie de Café
                 </h1>
                 <p className="text-center text-sm text-gray-500 mb-8">Last Updated: October 6, 2025</p>
@@ -33,7 +17,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 1 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">1. General Information</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">1. General Information</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>
                             Connie de Café (“we,” “our,” “us”) is a local cake shop based in Dumaguete City, Philippines,
@@ -48,7 +32,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 2 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">2. Orders and Customizations</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">2. Orders and Customizations</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>Orders must be placed at least 3–5 days in advance depending on the design and size.</li>
                         <li>
@@ -62,7 +46,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 3 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">3. Payments</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">3. Payments</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>A 50% down payment is required to confirm all orders.</li>
                         <li>The remaining balance must be paid upon pickup or before delivery.</li>
@@ -73,7 +57,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 4 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">4. Cancellations and Refunds</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">4. Cancellations and Refunds</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>
                             Orders canceled at least 3 days before the scheduled pickup or delivery may qualify for a partial refund or
@@ -93,7 +77,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 5 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">5. Pickup and Delivery</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">5. Pickup and Delivery</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>Pickup is available in Dumaguete City at the agreed time and location.</li>
                         <li>Delivery is available within Dumaguete and nearby areas for an additional fee.</li>
@@ -110,7 +94,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 6 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">6. Allergies and Ingredients</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">6. Allergies and Ingredients</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>Our products are made in a kitchen that handles nuts, dairy, eggs, soy, and gluten.</li>
                         <li>We cannot guarantee that any of our cakes are completely free from allergens.</li>
@@ -119,7 +103,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 7 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">7. Photos and Marketing</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">7. Photos and Marketing</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>We may take photos of your cake before pickup or delivery.</li>
                         <li>
@@ -131,7 +115,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 8 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">8. Liability</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">8. Liability</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>
                             Connie de Café will not be liable for:
@@ -146,7 +130,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 9 --> */}
                 <section className="mb-6">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">9. Changes to These Terms</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">9. Changes to These Terms</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>
                             We may update these Terms from time to time. Any updates will be posted on our website or social media.
@@ -157,7 +141,7 @@ const TermsConditions = () => {
 
                 {/* <!-- 10 --> */}
                 <section className="mb-2">
-                    <h2 className="text-xl font-semibold text-amber-800 mb-2">10. Contact Us</h2>
+                    <h2 className="text-xl font-semibold text-patisserie-cocoa mb-2">10. Contact Us</h2>
                     <p className="mb-2">For inquiries, custom cake designs, or concerns, please contact us:</p>
                     <p className="font-medium">
                         📞 +63 917 629 2377<br />

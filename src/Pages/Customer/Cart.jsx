@@ -405,7 +405,7 @@ const Cart = () => {
                 width: 256,
                 margin: 2,
                 color: {
-                    dark: '#AF524D',
+                    dark: '#D98F91',
                     light: '#FFFFFF'
                 },
                 errorCorrectionLevel: 'M'
@@ -632,11 +632,11 @@ const Cart = () => {
     // Check if user is logged in
     if (!session?.user) {
         return (
-            <div className="min-h-screen bg-gradient-to-b from-[#f7f0e7] to-[#e5d6c4] py-8">
+            <div className="min-h-screen bg-patisserie-vanilla py-8">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-8">
-                        <h1 className="text-4xl font-bold text-[#381914] mb-2">My Orders</h1>
-                        <p className="text-[#381914] opacity-80">Track upcoming and past cake orders</p>
+                        <h1 className="text-4xl font-bold text-[#754B45] mb-2">My Orders</h1>
+                        <p className="text-[#754B45] opacity-80">Track upcoming and past cake orders</p>
                     </div>
 
                     <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
@@ -645,7 +645,7 @@ const Cart = () => {
                         </svg>
                         <h3 className="text-xl font-semibold text-gray-600 mb-2">Please Log In First</h3>
                         <p className="text-gray-500 mb-6">You need to be logged in to access your cart and orders.</p>
-                        <Link to="/login" className="inline-block bg-[#AF524D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B3D3A] transition-colors">
+                        <Link to="/login" className="inline-block bg-patisserie-rose-strong text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#754B45] transition-colors">
                             Go to Login
                         </Link>
                     </div>
@@ -659,24 +659,24 @@ const Cart = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#f7f0e7] to-[#e5d6c4] py-8">
+        <div className="min-h-screen bg-patisserie-vanilla py-8">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-[#381914] mb-2">My Orders</h1>
-                    <p className="text-[#381914] opacity-80">Track upcoming and past cake orders</p>
+                    <h1 className="text-4xl font-bold text-[#754B45] mb-2">My Orders</h1>
+                    <p className="text-[#754B45] opacity-80">Track upcoming and past cake orders</p>
                 </div>
 
                 {/* Tab Navigation */}
                 <div className="mb-8 overflow-x-auto pb-2">
-                    <div role="group" aria-label="Order status" className="mx-auto flex w-max min-w-full gap-1 rounded-xl border border-[#492220]/10 bg-white p-1 shadow-sm md:min-w-0">
+                    <div role="group" aria-label="Order status" className="mx-auto flex w-max min-w-full gap-1 rounded-xl border border-[#754B45]/10 bg-white p-1 shadow-sm md:min-w-0">
                         <button
                             type="button"
                             aria-pressed={activeTab === 'toPay'}
                             onClick={() => setActiveTab('toPay')}
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toPay'
-                                ? 'bg-[#AF524D] text-white'
-                                : 'text-[#381914] hover:bg-gray-100'
+                                ? 'bg-patisserie-rose-strong text-white'
+                                : 'text-[#754B45] hover:bg-gray-100'
                                 }`}
                         >
                             To Pay ({orders.filter(order => order.order_status === 'Pending').length})
@@ -686,8 +686,8 @@ const Cart = () => {
                             aria-pressed={activeTab === 'toReceive'}
                             onClick={() => setActiveTab('toReceive')}
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toReceive'
-                                ? 'bg-[#AF524D] text-white'
-                                : 'text-[#381914] hover:bg-gray-100'
+                                ? 'bg-patisserie-rose-strong text-white'
+                                : 'text-[#754B45] hover:bg-gray-100'
                                 }`}
                         >
                             To Receive ({orders.filter(order => order.order_status === 'Approved').length})
@@ -697,8 +697,8 @@ const Cart = () => {
                             aria-pressed={activeTab === 'completed'}
                             onClick={() => setActiveTab('completed')}
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'completed'
-                                ? 'bg-[#AF524D] text-white'
-                                : 'text-[#381914] hover:bg-gray-100'
+                                ? 'bg-patisserie-rose-strong text-white'
+                                : 'text-[#754B45] hover:bg-gray-100'
                                 }`}
                         >
                             Completed ({orders.filter(order => order.order_status === 'Delivered').length})
@@ -708,8 +708,8 @@ const Cart = () => {
                             aria-pressed={activeTab === 'cancelled'}
                             onClick={() => setActiveTab('cancelled')}
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'cancelled'
-                                ? 'bg-[#AF524D] text-white'
-                                : 'text-[#381914] hover:bg-gray-100'
+                                ? 'bg-patisserie-rose-strong text-white'
+                                : 'text-[#754B45] hover:bg-gray-100'
                                 }`}
                         >
                             Cancelled ({orders.filter(order => order.order_status === 'Cancelled').length})
@@ -720,7 +720,7 @@ const Cart = () => {
                 {/* To Pay Tab */}
                 {activeTab === 'toPay' && (
                     <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-[#381914] mb-6">Orders to Pay</h2>
+                        <h2 className="text-2xl font-bold text-[#754B45] mb-6">Orders to Pay</h2>
 
                         {orders.filter(order => order.order_status === 'Pending').length === 0 ? (
                             <div className="text-center py-12">
@@ -731,9 +731,9 @@ const Cart = () => {
                                 <p className="text-gray-500">Your pending orders will appear here</p>
                             </div>
                         ) : (
-                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-6 scrollbar-thin scrollbar-thumb-[#AF524D]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#AF524D]/50">
+                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-6 scrollbar-thin scrollbar-thumb-[#D98F91]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#D98F91]/50">
                                 {orders.filter(order => order.order_status === 'Pending').map((order) => (
-                                    <div key={order.order_id} className="bg-gradient-to-br from-white to-[#F7F3F0] rounded-2xl shadow-lg border-2 border-[#AF524D]/10 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-[#AF524D]/30 group">
+                                    <div key={order.order_id} className="bg-white rounded-2xl shadow-lg border-2 border-[#D98F91]/10 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-[#D98F91]/30 group">
                                         <div className="p-6">
                                             <div className="flex items-start gap-6">
                                                 {order.CAKE && (
@@ -747,7 +747,7 @@ const Cart = () => {
                                                             }}
                                                         />
                                                         {order.order_type === 'custom' && (
-                                                            <div className="absolute -top-2 -right-2 bg-[#AF524D] text-white text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
+                                                            <div className="absolute -top-2 -right-2 bg-patisserie-rose-strong text-white text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
                                                                 Custom
                                                             </div>
                                                         )}
@@ -756,30 +756,30 @@ const Cart = () => {
                                                 <div className="flex-1">
                                                     <div className="flex justify-between items-start mb-4">
                                                         <div className="flex-1">
-                                                            <h3 className="text-xl font-bold text-[#381914] mb-2">
+                                                            <h3 className="text-xl font-bold text-[#754B45] mb-2">
                                                                 {order.CAKE ? order.CAKE.name : 'Cake'}
                                                             </h3>
                                                             <div className="grid grid-cols-2 gap-3 text-sm">
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                                                                     </svg>
                                                                     <span className="text-gray-600">Order #{order.order_id}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-9 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
                                                                     </svg>
                                                                     <span className="text-gray-600">Qty: {order.quantity}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                                     </svg>
                                                                     <span className="text-gray-600">{new Date(order.order_schedule).toLocaleDateString()}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                                     </svg>
@@ -788,7 +788,7 @@ const Cart = () => {
                                                             </div>
                                                             {order.payment && (
                                                                 <div className="mt-3 flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                                                                     </svg>
                                                                     <span className="text-sm text-gray-600">Payment: </span>
@@ -802,8 +802,8 @@ const Cart = () => {
                                                             )}
                                                         </div>
                                                         <div className="text-right">
-                                                            <div className="bg-[#AF524D]/10 rounded-xl p-4 mb-3">
-                                                                <p className="text-2xl font-bold text-[#AF524D]">
+                                                            <div className="bg-[#D98F91]/10 rounded-xl p-4 mb-3">
+                                                                <p className="text-2xl font-bold text-patisserie-rose-strong">
                                                                     ₱{order.total_price.toLocaleString()}
                                                                 </p>
                                                             </div>
@@ -833,7 +833,7 @@ const Cart = () => {
                                                             disabled={orderLoading}
                                                             className={`py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center gap-2 ${orderLoading
                                                                 ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-                                                                : 'bg-[#AF524D] text-white hover:bg-[#8B3D3A] shadow-lg hover:shadow-xl transform hover:scale-105'
+                                                                : 'bg-patisserie-rose-strong text-white hover:bg-[#754B45] shadow-lg hover:shadow-xl transform hover:scale-105'
                                                                 }`}
                                                         >
                                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -855,7 +855,7 @@ const Cart = () => {
                 {/* To Receive Tab */}
                 {activeTab === 'toReceive' && (
                     <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-[#381914] mb-6">Orders to Receive</h2>
+                        <h2 className="text-2xl font-bold text-[#754B45] mb-6">Orders to Receive</h2>
 
                         {orders.filter(order => order.order_status === 'Approved').length === 0 ? (
                             <div className="text-center py-12">
@@ -866,12 +866,12 @@ const Cart = () => {
                                 <p className="text-gray-500">Your approved orders will appear here</p>
                             </div>
                         ) : (
-                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-6 scrollbar-thin scrollbar-thumb-[#AF524D]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#AF524D]/50">
+                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-6 scrollbar-thin scrollbar-thumb-[#D98F91]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#D98F91]/50">
                                 {orders.filter(order => order.order_status === 'Approved').map((order) => (
                                     <div
                                         key={order.order_id}
                                         onClick={() => openQRModal(order)}
-                                        className="bg-gradient-to-br from-[#F7F3F0] to-[#E8D5D1] rounded-2xl shadow-lg border-2 border-[#AF524D]/20 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-[#AF524D]/40 group cursor-pointer"
+                                        className="bg-patisserie-vanilla rounded-2xl shadow-lg border-2 border-[#D98F91]/20 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-[#D98F91]/40 group cursor-pointer"
                                     >
                                         <div className="p-6">
                                             <div className="flex items-start gap-6">
@@ -886,7 +886,7 @@ const Cart = () => {
                                                             }}
                                                         />
                                                         {order.order_type === 'custom' && (
-                                                            <div className="absolute -top-2 -right-2 bg-[#AF524D] text-white text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
+                                                            <div className="absolute -top-2 -right-2 bg-patisserie-rose-strong text-white text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
                                                                 Custom
                                                             </div>
                                                         )}
@@ -898,30 +898,30 @@ const Cart = () => {
                                                 <div className="flex-1">
                                                     <div className="flex justify-between items-start mb-4">
                                                         <div className="flex-1">
-                                                            <h3 className="text-xl font-bold text-[#381914] mb-2">
+                                                            <h3 className="text-xl font-bold text-[#754B45] mb-2">
                                                                 {order.CAKE ? order.CAKE.name : 'Cake'}
                                                             </h3>
                                                             <div className="grid grid-cols-2 gap-3 text-sm">
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                                                                     </svg>
                                                                     <span className="text-gray-600">Order #{order.order_id}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-9 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
                                                                     </svg>
                                                                     <span className="text-gray-600">Qty: {order.quantity}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                                     </svg>
                                                                     <span className="text-gray-600">{new Date(order.order_schedule).toLocaleDateString()}</span>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                                     </svg>
@@ -930,7 +930,7 @@ const Cart = () => {
                                                             </div>
                                                             {order.payment && (
                                                                 <div className="mt-3 flex items-center gap-2">
-                                                                    <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                                                                     </svg>
                                                                     <span className="text-sm text-gray-600">Payment: </span>
@@ -944,8 +944,8 @@ const Cart = () => {
                                                             )}
                                                         </div>
                                                         <div className="text-right">
-                                                            <div className="bg-[#AF524D]/10 rounded-xl p-4 mb-3">
-                                                                <p className="text-2xl font-bold text-[#AF524D]">
+                                                            <div className="bg-[#D98F91]/10 rounded-xl p-4 mb-3">
+                                                                <p className="text-2xl font-bold text-patisserie-rose-strong">
                                                                     ₱{order.total_price.toLocaleString()}
                                                                 </p>
                                                             </div>
@@ -955,7 +955,7 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center justify-between mt-4">
-                                                        <div className="flex items-center gap-2 text-[#AF524D] font-semibold">
+                                                        <div className="flex items-center gap-2 text-patisserie-rose-strong font-semibold">
                                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                                                             </svg>
@@ -993,7 +993,7 @@ const Cart = () => {
                 {/* Completed Tab */}
                 {activeTab === 'completed' && (
                     <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-[#381914] mb-6">Delivered Orders</h2>
+                        <h2 className="text-2xl font-bold text-[#754B45] mb-6">Delivered Orders</h2>
 
                         {orders.filter(order => order.order_status === 'Delivered').length === 0 ? (
                             <div className="text-center py-12">
@@ -1004,7 +1004,7 @@ const Cart = () => {
                                 <p className="text-gray-500">Your delivered orders will appear here</p>
                             </div>
                         ) : (
-                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-[#AF524D]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#AF524D]/50">
+                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-[#D98F91]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#D98F91]/50">
                                 {orders.filter(order => order.order_status === 'Delivered').map((order) => (
                                     <div key={order.order_id} className="border border-gray-200 rounded-lg p-4">
                                         <div className="flex items-start gap-4">
@@ -1021,10 +1021,10 @@ const Cart = () => {
                                             <div className="flex-1">
                                                 <div className="flex justify-between items-start mb-2">
                                                     <div>
-                                                        <h3 className="font-semibold text-[#381914]">
+                                                        <h3 className="font-semibold text-[#754B45]">
                                                             {order.CAKE ? order.CAKE.name : 'Cake'}
                                                             {order.order_type === 'custom' && (
-                                                                <span className="ml-2 inline-block px-2 py-1 bg-[#AF524D] text-white text-xs rounded-full">
+                                                                <span className="ml-2 inline-block px-2 py-1 bg-patisserie-rose-strong text-white text-xs rounded-full">
                                                                     Custom
                                                                 </span>
                                                             )}
@@ -1051,7 +1051,7 @@ const Cart = () => {
                                                         )}
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="font-semibold text-[#381914]">
+                                                        <p className="font-semibold text-[#754B45]">
                                                             ₱{order.total_price}
                                                         </p>
                                                         <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(order.order_status)}`}>
@@ -1071,7 +1071,7 @@ const Cart = () => {
                 {/* Cancelled Tab */}
                 {activeTab === 'cancelled' && (
                     <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-[#381914] mb-6">Cancelled Orders</h2>
+                        <h2 className="text-2xl font-bold text-[#754B45] mb-6">Cancelled Orders</h2>
 
                         {orders.filter(order => order.order_status === 'Cancelled').length === 0 ? (
                             <div className="text-center py-12">
@@ -1082,7 +1082,7 @@ const Cart = () => {
                                 <p className="text-gray-500">Your cancelled orders will appear here</p>
                             </div>
                         ) : (
-                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-[#AF524D]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#AF524D]/50">
+                            <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-[#D98F91]/30 scrollbar-track-gray-100 hover:scrollbar-thumb-[#D98F91]/50">
                                 {orders.filter(order => order.order_status === 'Cancelled').map((order) => (
                                     <div key={order.order_id} className="border border-gray-200 rounded-lg p-4">
                                         <div className="flex items-start gap-4">
@@ -1099,10 +1099,10 @@ const Cart = () => {
                                             <div className="flex-1">
                                                 <div className="flex justify-between items-start mb-2">
                                                     <div>
-                                                        <h3 className="font-semibold text-[#381914]">
+                                                        <h3 className="font-semibold text-[#754B45]">
                                                             {order.CAKE ? order.CAKE.name : 'Cake'}
                                                             {order.order_type === 'custom' && (
-                                                                <span className="ml-2 inline-block px-2 py-1 bg-[#AF524D] text-white text-xs rounded-full">
+                                                                <span className="ml-2 inline-block px-2 py-1 bg-patisserie-rose-strong text-white text-xs rounded-full">
                                                                     Custom
                                                                 </span>
                                                             )}
@@ -1129,7 +1129,7 @@ const Cart = () => {
                                                         )}
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="font-semibold text-[#381914]">
+                                                        <p className="font-semibold text-[#754B45]">
                                                             ₱{order.total_price}
                                                         </p>
                                                         <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(order.order_status)}`}>
@@ -1154,7 +1154,7 @@ const Cart = () => {
                     <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4">
                         <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6">
                             <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-xl font-bold text-[#381914]">Upload Receipt</h3>
+                                <h3 className="text-xl font-bold text-[#754B45]">Upload Receipt</h3>
                                 <button
                                     onClick={() => {
                                         setShowPaymentModal(false);
@@ -1204,7 +1204,7 @@ const Cart = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Upload Receipt Image
                                 </label>
-                                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#AF524D] transition-colors">
+                                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#D98F91] transition-colors">
                                     <input
                                         type="file"
                                         accept="image/*"
@@ -1250,7 +1250,7 @@ const Cart = () => {
                                     disabled={!receiptFile || uploading}
                                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${!receiptFile || uploading
                                         ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                                        : 'bg-[#AF524D] text-white hover:bg-[#8B3D3A]'
+                                        : 'bg-patisserie-rose-strong text-white hover:bg-[#754B45]'
                                         }`}
                                 >
                                     {uploading ? 'Uploading...' : 'Upload Receipt'}
@@ -1271,7 +1271,7 @@ const Cart = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-[#381914] mb-2">Cancel Order</h3>
+                            <h3 className="text-xl font-bold text-[#754B45] mb-2">Cancel Order</h3>
                             <div className="text-left bg-gray-50 rounded-xl p-4 mb-6">
                                 <p className="text-sm text-gray-600 mb-2">
                                     <span className="font-semibold">Order ID:</span> #{orderToCancel.order_id}
@@ -1380,12 +1380,12 @@ const Cart = () => {
                 <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4 overflow-y-auto">
                     <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 sm:p-6 my-4 sm:my-8 max-h-[95vh] overflow-y-auto">
                         <div className="text-center">
-                            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-[#AF524D]/10 mb-4">
-                                <svg className="h-8 w-8 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-[#D98F91]/10 mb-4">
+                                <svg className="h-8 w-8 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-[#381914] mb-2">Pickup QR Code</h3>
+                            <h3 className="text-xl font-bold text-[#754B45] mb-2">Pickup QR Code</h3>
                             <p className="text-gray-600 mb-6">Show this QR code to the admin for order pickup</p>
 
                             <div className="bg-gray-50 rounded-xl p-4 mb-6">
@@ -1456,7 +1456,7 @@ const Cart = () => {
                                     setSelectedOrderForQR(null);
                                     setQrCodeDataURL('');
                                 }}
-                                className="w-full py-3 px-4 bg-[#AF524D] text-white rounded-xl font-semibold hover:bg-[#8B3D3A] transition-colors"
+                                className="w-full py-3 px-4 bg-patisserie-rose-strong text-white rounded-xl font-semibold hover:bg-[#754B45] transition-colors"
                             >
                                 Close
                             </button>

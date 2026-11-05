@@ -1,26 +1,10 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] relative overflow-hidden py-10">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-20 left-20 w-32 h-32 bg-[#AF524D] rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#DFAD56] rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E2D2A2] rounded-full blur-3xl"></div>
-            </div>
+    <div className="min-h-screen bg-patisserie-vanilla relative overflow-hidden py-10">
 
-            {/* Floating Elements */}
-            <div className="absolute top-10 left-10 animate-bounce">
-                <div className="w-6 h-6 bg-[#DFAD56] rounded-full opacity-60"></div>
-            </div>
-            <div className="absolute top-20 right-20 animate-pulse">
-                <div className="w-4 h-4 bg-[#AF524D] rounded-full opacity-40"></div>
-            </div>
-            <div className="absolute bottom-20 left-20 animate-bounce delay-1000">
-                <div className="w-8 h-8 bg-[#E2D2A2] rounded-full opacity-50"></div>
-            </div>
 
     <main class="max-w-4xl mx-auto p-6 sm:p-10 bg-white shadow-lg rounded-2xl">
-      <h1 class="text-3xl sm:text-4xl font-bold text-center text-amber-800 mb-2">
+      <h1 class="text-3xl sm:text-4xl font-bold text-center text-patisserie-cocoa mb-2">
         Privacy Policy – Connie de Café
       </h1>
       <p class="text-center text-sm text-gray-500 mb-8">Last Updated: October 6, 2025</p>
@@ -33,7 +17,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 1 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">1. Information We Collect</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">1. Information We Collect</h2>
         <p class="mb-3">When you place an order or contact us, we may collect the following information:</p>
         <ul class="list-disc list-inside space-y-2">
           <li>
@@ -53,7 +37,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 2 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">2. How We Use Your Information</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">2. How We Use Your Information</h2>
         <p class="mb-3">We use your information to:</p>
         <ul class="list-disc list-inside space-y-2">
           <li>Process and confirm your orders.</li>
@@ -69,7 +53,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 3 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">3. Data Storage and Protection</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">3. Data Storage and Protection</h2>
         <ul class="list-disc list-inside space-y-2">
           <li>
             All personal data is stored securely in our records or trusted online systems (e.g., email or messaging
@@ -82,7 +66,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 4 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">4. Sharing of Information</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">4. Sharing of Information</h2>
         <p class="mb-3">We only share your information when necessary to:</p>
         <ul class="list-disc list-inside space-y-2">
           <li>Fulfill your order (e.g., with delivery couriers).</li>
@@ -95,7 +79,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 5 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">5. Cookies and Online Tools</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">5. Cookies and Online Tools</h2>
         <p class="mb-3">
           If you visit our website, small text files called cookies may be used to improve your browsing experience.
           Cookies help us remember your preferences and enhance site functionality.
@@ -108,7 +92,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 6 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">6. Your Rights</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">6. Your Rights</h2>
         <p class="mb-3">Under the Data Privacy Act of 2012, you have the right to:</p>
         <ul class="list-disc list-inside space-y-2">
           <li>Access and request a copy of your personal data.</li>
@@ -124,7 +108,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 7 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">7. Data Retention</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">7. Data Retention</h2>
         <p>
           We retain your personal information only as long as necessary to fulfill the purpose it was collected for —
           such as completing your order or complying with legal obligations — after which it will be securely deleted.
@@ -133,7 +117,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 8 --> */}
       <section class="mb-6">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">8. Policy Updates</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">8. Policy Updates</h2>
         <p>
           Connie de Café may update this Privacy Policy from time to time. Changes will be posted on our website or
           social media page with the updated date. Continued use of our services means you accept the revised policy.
@@ -142,7 +126,7 @@ const PrivacyPolicy = () => {
 
       {/* <!-- 9 --> */}
       <section class="mb-2">
-        <h2 class="text-xl font-semibold text-amber-800 mb-2">9. Contact Us</h2>
+        <h2 class="text-xl font-semibold text-patisserie-cocoa mb-2">9. Contact Us</h2>
         <p class="mb-2">
           If you have any questions or requests regarding your personal data, please contact us:
         </p>

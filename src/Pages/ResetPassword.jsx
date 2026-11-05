@@ -326,18 +326,11 @@ const ResetPassword = () => {
   // Show loading state while validating
   if (isValidating) {
     return (
-      <div className="bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
-        {/* Floating Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[#AF524D]/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-[#DFAD56]/15 rounded-full blur-lg animate-pulse delay-1000"></div>
-          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-[#8B3A3A]/8 rounded-full blur-2xl animate-pulse delay-2000"></div>
-          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-[#DFAD56]/12 rounded-full blur-lg animate-pulse delay-3000"></div>
-        </div>
+      <div className="bg-patisserie-vanilla min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
 
         <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 max-w-md w-full relative z-10 overflow-hidden">
           {/* Header Section */}
-          <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-8 text-center relative">
+          <div className="bg-patisserie-rose-strong p-8 text-center relative">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <div className="mb-6">
@@ -354,12 +347,12 @@ const ResetPassword = () => {
           <div className="p-8">
             <div className="text-center">
               <div className="flex items-center justify-center mb-6">
-                <svg className="animate-spin -ml-1 mr-3 h-8 w-8 text-[#AF524D]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-3 h-8 w-8 text-patisserie-rose-strong" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
               </div>
-              <p className="text-[#492220]/60 text-sm">This may take a few moments...</p>
+              <p className="text-[#754B45]/60 text-sm">This may take a few moments...</p>
             </div>
           </div>
         </div>
@@ -369,18 +362,11 @@ const ResetPassword = () => {
 
   if (!isValidToken) {
     return (
-      <div className="bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
-        {/* Floating Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[#AF524D]/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-[#DFAD56]/15 rounded-full blur-lg animate-pulse delay-1000"></div>
-          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-[#8B3A3A]/8 rounded-full blur-2xl animate-pulse delay-2000"></div>
-          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-[#DFAD56]/12 rounded-full blur-lg animate-pulse delay-3000"></div>
-        </div>
+      <div className="bg-patisserie-vanilla min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
 
         <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 max-w-md w-full relative z-10 overflow-hidden">
           {/* Header Section */}
-          <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-8 text-center relative">
+          <div className="bg-patisserie-rose-strong p-8 text-center relative">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <div className="mb-6">
@@ -396,13 +382,13 @@ const ResetPassword = () => {
           {/* Content Section */}
           <div className="p-8">
             <div className="text-center">
-              <p className="text-[#492220]/80 text-sm leading-relaxed mb-6">{error}</p>
+              <p className="text-[#754B45]/80 text-sm leading-relaxed mb-6">{error}</p>
               <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-[#AF524D]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-patisserie-rose-strong" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                <p className="text-[#492220]/60 text-xs">Redirecting to login page...</p>
+                <p className="text-[#754B45]/60 text-xs">Redirecting to login page...</p>
               </div>
             </div>
           </div>
@@ -412,18 +398,11 @@ const ResetPassword = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Floating Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#AF524D]/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-[#DFAD56]/15 rounded-full blur-lg animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-[#8B3A3A]/8 rounded-full blur-2xl animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-[#DFAD56]/12 rounded-full blur-lg animate-pulse delay-3000"></div>
-      </div>
+    <div className="bg-patisserie-vanilla min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
 
       <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 max-w-md w-full relative z-10 overflow-hidden">
         {/* Header Section */}
-        <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-8 text-center relative">
+        <div className="bg-patisserie-rose-strong p-8 text-center relative">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative z-10">
             <div className="mb-6">
@@ -463,7 +442,7 @@ const ResetPassword = () => {
 
           <form onSubmit={handlePasswordReset} className="flex flex-col space-y-6 w-full">
             <div>
-              <label htmlFor="newPassword" className="block text-sm font-medium text-[#492220] mb-2">
+              <label htmlFor="newPassword" className="block text-sm font-medium text-[#754B45] mb-2">
                 New Password <span className="text-red-500">*</span>
               </label>
               <div className="relative">
@@ -476,12 +455,12 @@ const ResetPassword = () => {
                   onChange={handlePasswordChange}
                   onFocus={() => setShowPasswordValidation(newPassword.length > 0)}
                   onBlur={() => setShowPasswordValidation(false)}
-                  className="w-full bg-white/90 backdrop-blur-sm text-[#492220] rounded-2xl px-4 py-3 pr-12 border border-[#AF524D]/20 focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] text-sm shadow-sm transition-all duration-300 hover:shadow-md"
+                  className="w-full bg-white/90 backdrop-blur-sm text-[#754B45] rounded-2xl px-4 py-3 pr-12 border border-[#D98F91]/20 focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] text-sm shadow-sm transition-all duration-300 hover:shadow-md"
                   placeholder="Enter new password"
                 />
                 <button
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#AF524D]/60 hover:text-[#AF524D] transition-colors duration-200"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-patisserie-rose-strong/60 hover:text-patisserie-rose-strong transition-colors duration-200"
                   onClick={() => setShowNewPassword(!showNewPassword)}
                 >
                   {showNewPassword ? (
@@ -498,9 +477,9 @@ const ResetPassword = () => {
 
                 {/* Password Validation Popup */}
                 {showPasswordValidation && (
-                  <div className="absolute top-full left-0 mt-3 bg-white/95 backdrop-blur-sm border border-[#AF524D]/20 rounded-2xl shadow-2xl p-5 z-20 w-fit min-w-[280px]">
-                    <div className="text-sm font-medium text-[#492220] mb-4 flex items-center">
-                      <svg className="w-4 h-4 text-[#AF524D] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="absolute top-full left-0 mt-3 bg-white/95 backdrop-blur-sm border border-[#D98F91]/20 rounded-2xl shadow-2xl p-5 z-20 w-fit min-w-[280px]">
+                    <div className="text-sm font-medium text-[#754B45] mb-4 flex items-center">
+                      <svg className="w-4 h-4 text-patisserie-rose-strong mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       Password Requirements
@@ -533,7 +512,7 @@ const ResetPassword = () => {
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-[#492220] mb-2">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-[#754B45] mb-2">
                 Confirm Password <span className="text-red-500">*</span>
               </label>
               <div className="relative">
@@ -543,12 +522,12 @@ const ResetPassword = () => {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full bg-white/90 backdrop-blur-sm text-[#492220] rounded-2xl px-4 py-3 pr-12 border border-[#AF524D]/20 focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] text-sm shadow-sm transition-all duration-300 hover:shadow-md"
+                  className="w-full bg-white/90 backdrop-blur-sm text-[#754B45] rounded-2xl px-4 py-3 pr-12 border border-[#D98F91]/20 focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] text-sm shadow-sm transition-all duration-300 hover:shadow-md"
                   placeholder="Confirm new password"
                 />
                 <button
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#AF524D]/60 hover:text-[#AF524D] transition-colors duration-200"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-patisserie-rose-strong/60 hover:text-patisserie-rose-strong transition-colors duration-200"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 >
                   {showConfirmPassword ? (
@@ -569,7 +548,7 @@ const ResetPassword = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] hover:from-[#8B3A3A] hover:to-[#6B2D2D] text-white font-bold px-8 py-4 rounded-2xl cursor-pointer transition-all duration-300 tracking-wide w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm shadow-lg hover:shadow-xl hover:scale-105 transform disabled:hover:scale-100"
+                className="bg-patisserie-rose-strong hover:from-[#754B45] hover:to-[#754B45] text-white font-bold px-8 py-4 rounded-2xl cursor-pointer transition-all duration-300 tracking-wide w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm shadow-lg hover:shadow-xl hover:scale-105 transform disabled:hover:scale-100"
               >
                 {loading ? (
                   <>

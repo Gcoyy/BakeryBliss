@@ -22,30 +22,16 @@ const LoadingSpinner = ({ message = "Loading...", size = "large" }) => {
     if (size === "small") {
         return (
             <div className="flex items-center justify-center space-x-2">
-                <div className="w-4 h-4 border-2 border-[#AF524D] border-t-transparent rounded-full animate-spin"></div>
+                <div className="h-4 w-4 animate-spin rounded-full border-2 border-patisserie-rose-strong border-t-transparent"></div>
                 <span className="text-sm text-gray-600">{message}</span>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] flex items-center justify-center relative overflow-hidden">
-            {/* Floating decorative elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-pulse"></div>
-                <div className="absolute top-40 right-20 w-16 h-16 bg-[#AF524D]/10 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-32 left-1/4 w-12 h-12 bg-[#DFAD56]/20 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white/15 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-
-                {/* Cake decoration elements */}
-                <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-[#AF524D]/20 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-                <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-[#DFAD56]/30 rounded-full animate-bounce" style={{ animationDelay: '0.8s' }}></div>
-            </div>
-
-            {/* Main loading card */}
-            <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden relative z-10">
-                {/* Header with gradient */}
-                <div className="bg-gradient-to-r from-[#AF524D] to-[#DFAD56] px-8 py-6 text-center">
+        <div className="flex min-h-screen items-center justify-center bg-patisserie-vanilla">
+            <div className="relative z-10 overflow-hidden rounded-3xl border border-patisserie-blush bg-white shadow-lg">
+                <div className="bg-patisserie-blush px-8 py-6 text-center">
                     <div className="flex items-center justify-center mb-4">
                         {/* Animated Cake Icon */}
                         <div className="relative">
@@ -56,33 +42,33 @@ const LoadingSpinner = ({ message = "Loading...", size = "large" }) => {
                                 <div className="absolute bottom-2/3 left-0 right-0 h-1/3 bg-white/50 rounded-t-2xl"></div>
 
                                 {/* Candle */}
-                                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-1 h-3 bg-yellow-200 rounded-full">
-                                    <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-orange-300 rounded-full animate-pulse"></div>
+                                <div className="absolute left-1/2 top-1 h-3 w-1 -translate-x-1/2 rounded-full bg-patisserie-buttercream">
+                                    <div className="absolute -top-0.5 left-1/2 h-1.5 w-1.5 -translate-x-1/2 animate-pulse rounded-full bg-patisserie-rose-strong"></div>
                                 </div>
                             </div>
 
                             {/* Spinning animation around the cake */}
-                            <div className="absolute inset-0 border-4 border-transparent border-t-white/60 border-r-white/40 rounded-full animate-spin"></div>
+                            <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-r-patisserie-rose/50 border-t-patisserie-rose-strong"></div>
                         </div>
                     </div>
-                    <h2 className="text-2xl font-bold text-white font-abhaya">Bakery Bliss</h2>
+                    <h2 className="font-abhaya text-2xl font-bold text-patisserie-cocoa">Connie de Café</h2>
                 </div>
 
                 {/* Content area */}
                 <div className="px-8 py-6 text-center">
-                    <p className="text-[#381914] text-lg mb-6 font-medium">{message}</p>
+                    <p className="mb-6 text-lg font-medium text-patisserie-cocoa">{message}</p>
 
                     {/* Modern loading animation */}
                     <div className="flex items-center justify-center space-x-2 mb-4">
-                        <div className="w-3 h-3 bg-[#AF524D] rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                        <div className="w-3 h-3 bg-[#DFAD56] rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                        <div className="w-3 h-3 bg-[#E2D2A2] rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                        <div className="h-3 w-3 animate-bounce rounded-full bg-patisserie-rose-strong" style={{ animationDelay: '0ms' }}></div>
+                        <div className="h-3 w-3 animate-bounce rounded-full bg-patisserie-rose" style={{ animationDelay: '150ms' }}></div>
+                        <div className="h-3 w-3 animate-bounce rounded-full bg-patisserie-buttercream" style={{ animationDelay: '300ms' }}></div>
                     </div>
 
                     {/* Progress bar */}
                     <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                         <div
-                            className="h-full bg-gradient-to-r from-[#AF524D] to-[#DFAD56] rounded-full transition-all duration-300 ease-out origin-left"
+                            className="h-full origin-left rounded-full bg-patisserie-rose-strong transition-all duration-300 ease-out"
                             style={{
                                 transform: `scaleX(${progress / 100})`,
                                 transformOrigin: 'left'

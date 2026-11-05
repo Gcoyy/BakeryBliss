@@ -86,14 +86,14 @@ const Header = () => {
               to={to}
               onClick={isMobile ? () => setIsMobileMenuOpen(false) : undefined}
               aria-current={isActive ? "page" : undefined}
-              className={`block rounded-full px-3 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B3A3A] ${
+              className={`block rounded-full px-3 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-patisserie-rose-strong ${
                 isActive
                   ? isAdmin
-                    ? "bg-white/55 text-[#381914]"
-                    : "bg-[#492220]/8 text-[#492220]"
+                    ? "bg-white/55 text-patisserie-cocoa"
+                    : "bg-patisserie-blush text-patisserie-cocoa"
                   : isAdmin
-                    ? "text-[#492220] hover:bg-white/35"
-                    : "text-[#492220]/80 hover:bg-[#492220]/6 hover:text-[#492220]"
+                    ? "text-patisserie-cocoa hover:bg-white/35"
+                    : "text-patisserie-cocoa/80 hover:bg-patisserie-blush hover:text-patisserie-cocoa"
               }`}
             >
               {label}
@@ -109,13 +109,13 @@ const Header = () => {
       className={`sticky top-0 z-50 border-b ${
         isAdmin
           ? "border-[#b8941f]/30 bg-[#e6d5aa]"
-          : "border-[#492220]/10 bg-[#fbf8f2]"
+          : "border-patisserie-cocoa/10 bg-patisserie-vanilla"
       }`}
     >
       <div className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Link
           to={isAdmin ? "/adminpage" : "/home#home"}
-          className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8B3A3A]"
+          className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#754B45]"
         >
           <img
             src="/Web Icon.png"
@@ -123,8 +123,8 @@ const Header = () => {
             aria-hidden="true"
             className="h-10 w-10 object-contain"
           />
-          <span className="font-abhaya text-lg font-bold leading-tight text-[#492220] sm:text-xl">
-            Connie <span className="text-[#8B3A3A]">de Café</span>
+          <span className="font-abhaya text-lg font-bold leading-tight text-patisserie-cocoa sm:text-xl">
+            Connie <span className="text-patisserie-rose-strong">de Café</span>
           </span>
         </Link>
 
@@ -135,7 +135,7 @@ const Header = () => {
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[#492220] transition-colors hover:bg-[#492220]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B3A3A] lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[#754B45] transition-colors hover:bg-[#754B45]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#754B45] lg:hidden"
             onClick={() => setIsMobileMenuOpen((open) => !open)}
             aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMobileMenuOpen}
@@ -157,12 +157,12 @@ const Header = () => {
           </button>
 
           {loading ? (
-            <span className="h-9 w-9 animate-pulse rounded-full bg-[#492220]/10" aria-label="Loading account" />
+            <span className="h-9 w-9 animate-pulse rounded-full bg-[#754B45]/10" aria-label="Loading account" />
           ) : session ? (
             <>
               <Link
                 to={isAdmin ? "/admin/profile" : "/profile"}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[#492220] transition-colors hover:bg-[#492220]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B3A3A]"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[#754B45] transition-colors hover:bg-[#754B45]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#754B45]"
                 aria-label="My profile"
                 title="My profile"
               >
@@ -173,7 +173,7 @@ const Header = () => {
               {!isAdmin && (
                 <Link
                   to="/cart"
-                  className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-[#492220] transition-colors hover:bg-[#492220]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B3A3A]"
+                  className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-[#754B45] transition-colors hover:bg-[#754B45]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#754B45]"
                   aria-label={`My orders${pendingOrdersCount ? `, ${pendingOrdersCount} pending` : ""}`}
                   title={`My orders${pendingOrdersCount ? ` (${pendingOrdersCount} pending)` : ""}`}
                 >
@@ -181,7 +181,7 @@ const Header = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M3 4h2l2.2 10.1a2 2 0 002 1.6h8.9a2 2 0 001.9-1.4L22 8H7M10 20a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" />
                   </svg>
                   {pendingOrdersCount > 0 && (
-                    <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#8B3A3A] px-1 text-[10px] font-semibold text-white">
+                    <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#754B45] px-1 text-[10px] font-semibold text-white">
                       {pendingOrdersCount > 99 ? "99+" : pendingOrdersCount}
                     </span>
                   )}
@@ -191,7 +191,7 @@ const Header = () => {
           ) : (
             <Link
               to="/login"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-[#492220] px-4 text-sm font-medium text-white transition-colors hover:bg-[#713b34] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B3A3A]"
+              className="inline-flex h-10 items-center justify-center rounded-full bg-patisserie-rose-strong px-4 text-sm font-medium text-white transition-colors hover:bg-patisserie-cocoa focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-patisserie-rose-strong"
             >
               <svg className="h-4 w-4 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4m-5-4l5-5m0 0l-5-5m5 5H3" />
@@ -206,7 +206,7 @@ const Header = () => {
       <nav
         id="mobile-navigation"
         aria-label="Mobile navigation"
-        className={`border-t border-[#492220]/10 bg-[#fbf8f2] px-4 py-3 shadow-lg lg:hidden ${
+        className={`border-t border-[#754B45]/10 bg-[#FFF9F5] px-4 py-3 shadow-lg lg:hidden ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
