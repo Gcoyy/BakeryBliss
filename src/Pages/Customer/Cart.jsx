@@ -635,8 +635,8 @@ const Cart = () => {
             <div className="min-h-screen bg-gradient-to-b from-[#f7f0e7] to-[#e5d6c4] py-8">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-8">
-                        <h1 className="text-4xl font-bold text-[#381914] mb-2">My Account</h1>
-                        <p className="text-[#381914] opacity-80">Manage your cart and view your orders</p>
+                        <h1 className="text-4xl font-bold text-[#381914] mb-2">My Orders</h1>
+                        <p className="text-[#381914] opacity-80">Track upcoming and past cake orders</p>
                     </div>
 
                     <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
@@ -663,16 +663,18 @@ const Cart = () => {
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-[#381914] mb-2">My Account</h1>
-                    <p className="text-[#381914] opacity-80">Manage your cart and view your orders</p>
+                    <h1 className="text-4xl font-bold text-[#381914] mb-2">My Orders</h1>
+                    <p className="text-[#381914] opacity-80">Track upcoming and past cake orders</p>
                 </div>
 
                 {/* Tab Navigation */}
-                <div className="flex justify-center mb-8">
-                    <div className="bg-white rounded-lg p-1 shadow-lg">
+                <div className="mb-8 overflow-x-auto pb-2">
+                    <div role="group" aria-label="Order status" className="mx-auto flex w-max min-w-full gap-1 rounded-xl border border-[#492220]/10 bg-white p-1 shadow-sm md:min-w-0">
                         <button
+                            type="button"
+                            aria-pressed={activeTab === 'toPay'}
                             onClick={() => setActiveTab('toPay')}
-                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'toPay'
+                            className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toPay'
                                 ? 'bg-[#AF524D] text-white'
                                 : 'text-[#381914] hover:bg-gray-100'
                                 }`}
@@ -680,8 +682,10 @@ const Cart = () => {
                             To Pay ({orders.filter(order => order.order_status === 'Pending').length})
                         </button>
                         <button
+                            type="button"
+                            aria-pressed={activeTab === 'toReceive'}
                             onClick={() => setActiveTab('toReceive')}
-                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'toReceive'
+                            className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toReceive'
                                 ? 'bg-[#AF524D] text-white'
                                 : 'text-[#381914] hover:bg-gray-100'
                                 }`}
@@ -689,8 +693,10 @@ const Cart = () => {
                             To Receive ({orders.filter(order => order.order_status === 'Approved').length})
                         </button>
                         <button
+                            type="button"
+                            aria-pressed={activeTab === 'completed'}
                             onClick={() => setActiveTab('completed')}
-                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'completed'
+                            className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'completed'
                                 ? 'bg-[#AF524D] text-white'
                                 : 'text-[#381914] hover:bg-gray-100'
                                 }`}
@@ -698,8 +704,10 @@ const Cart = () => {
                             Completed ({orders.filter(order => order.order_status === 'Delivered').length})
                         </button>
                         <button
+                            type="button"
+                            aria-pressed={activeTab === 'cancelled'}
                             onClick={() => setActiveTab('cancelled')}
-                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'cancelled'
+                            className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'cancelled'
                                 ? 'bg-[#AF524D] text-white'
                                 : 'text-[#381914] hover:bg-gray-100'
                                 }`}
