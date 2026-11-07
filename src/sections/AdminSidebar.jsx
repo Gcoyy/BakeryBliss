@@ -104,8 +104,12 @@ const AdminSidebar = () => {
 
 
   return (
-    <aside className="w-52 bg-white border-4 border-[#AF524D] py-4 px-2 rounded-2xl max-h-fit">
-      <ul className="space-y-2">
+    <aside className="w-full shrink-0 border-b border-[#e4ded8] bg-white px-4 py-4 md:min-h-screen md:w-64 md:border-b-0 md:border-r md:px-5 md:py-7">
+      <div className="mb-7 hidden md:block">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#9b7d73]">Connie de Café</p>
+        <h1 className="mt-2 font-abhaya text-2xl font-semibold text-[#2f2d2b]">Bakery operations</h1>
+      </div>
+      <ul className="flex gap-2 overflow-x-auto pb-1 md:block md:space-y-2 md:pb-0">
         {[
           { name: "Inventory", path: "inventory", indicator: lowInventoryCount, indicatorColor: "red" },
           { name: "Cake Orders", path: "cake orders", indicator: newOrdersCount, indicatorColor: "green" },
