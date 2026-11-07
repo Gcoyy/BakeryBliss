@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { supabase } from '../../supabaseClient';
 import toast from 'react-hot-toast';
 import LoadingSpinner from '../../components/LoadingSpinner';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
 import { time } from 'framer-motion';
 
@@ -18,6 +18,7 @@ const getPublicImageUrl = (path) => {
   return supabase.storage.from("cake").getPublicUrl(path).data.publicUrl;
 };
 
+<<<<<<< HEAD
 const fallbackImages = [
   "/images/vintage-heart-cake.png",
   "/images/floral-buttercream-cake.png",
@@ -27,6 +28,8 @@ const fallbackImages = [
 
 const formatPrice = (amount) => `₱${Number(amount).toLocaleString("en-PH")}`;
 
+=======
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
 // Blocked dates utility functions
 const isDateTimeBlocked = async (date, time = null) => {
   try {
@@ -175,7 +178,6 @@ const formatTime = (timeString) => {
 
 const CakeCatalog = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const { session } = UserAuth();
   const [cakes, setCakes] = useState([]);
   const [price, setPrice] = useState(16000);
@@ -187,7 +189,6 @@ const CakeCatalog = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [loadError, setLoadError] = useState(false);
   const [pageLoading, setPageLoading] = useState(false);
   const cakesPerPage = 8;
   const isInitialMount = useRef(true);
@@ -430,12 +431,10 @@ const CakeCatalog = () => {
 
         const { data, error } = apiResult;
         if (error) {
-          console.error("Error fetching cakes:", error);
-          setLoadError(true);
+          toast.error("Failed to load cakes. Please try again.");
           return;
         }
 
-        setLoadError(false);
         // Generate public URLs for each cake
         const cakesWithImages = data.map((cake) => {
           const publicUrl = getPublicImageUrl(cake.cake_img);
@@ -447,8 +446,7 @@ const CakeCatalog = () => {
         // Fetch themes after cakes are loaded
         await fetchThemes();
       } catch (error) {
-        console.error("Error fetching cakes:", error);
-        setLoadError(true);
+        toast.error("Failed to load cakes. Please try again.");
       } finally {
         setLoading(false);
       }
@@ -457,17 +455,6 @@ const CakeCatalog = () => {
     fetchCakes();
   }, []);
 
-  useEffect(() => {
-    const selectedCakeId = location.state?.selectedCakeId;
-    if (!selectedCakeId || cakes.length === 0) return;
-
-    const cake = cakes.find((item) => item.cake_id === selectedCakeId);
-    if (!cake) return;
-
-    setSelectedCake(cake);
-    setIsModalOpen(true);
-    navigate(location.pathname, { replace: true, state: null });
-  }, [cakes, location.pathname, location.state, navigate]);
 
   const handleCakeClick = (cake) => {
     setSelectedCake(cake);
@@ -814,8 +801,31 @@ const CakeCatalog = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-[#FFF9F5]">
       <div className="p-4 sm:p-8">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-[#F8E6B4] via-[#E2D2A2] to-[#DFDAC7] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-[#AF524D] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#DFAD56] rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E2D2A2] rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 animate-bounce">
+        <div className="w-6 h-6 bg-[#DFAD56] rounded-full opacity-60"></div>
+      </div>
+      <div className="absolute top-20 right-20 animate-pulse">
+        <div className="w-4 h-4 bg-[#AF524D] rounded-full opacity-40"></div>
+      </div>
+      <div className="absolute bottom-20 left-20 animate-bounce delay-1000">
+        <div className="w-8 h-8 bg-[#E2D2A2] rounded-full opacity-50"></div>
+      </div>
+
+      <div className="relative z-10 p-4">
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
         {/* Header Section */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-abhaya font-bold text-[#754B45] mb-4">Our Cake Collection</h1>
@@ -827,12 +837,20 @@ const CakeCatalog = () => {
         <div className="flex flex-col xl:flex-row gap-6 max-w-7xl mx-auto">
           {/* Sidebar */}
           <aside className="w-full xl:w-80 xl:sticky xl:top-6 xl:self-start">
+<<<<<<< HEAD
             <div className="sticky top-24 overflow-hidden rounded-2xl border border-[#754B45]/10 bg-white p-5 text-[#754B45] shadow-sm">
+=======
+            <div className="bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-6 text-[#492220] sticky top-6 hover:shadow-3xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
               {/* Subtle gradient border effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#D98F91]/5 via-transparent to-[#E8CDAA]/5 rounded-3xl pointer-events-none"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-6">
+<<<<<<< HEAD
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#754B45]">
+=======
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#AF524D] to-[#8B3A3A] rounded-lg flex items-center justify-center">
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                     <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z" />
                     </svg>
@@ -848,7 +866,11 @@ const CakeCatalog = () => {
                     </label>
                     <select
                       id="sortBy"
+<<<<<<< HEAD
                       className="w-full rounded-xl border border-[#754B45]/15 bg-[#FFF9F5] px-4 py-3 text-[#754B45] transition-colors focus:border-[#754B45] focus:outline-none focus:ring-2 focus:ring-[#754B45]/20"
+=======
+                      className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220]"
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
                     >
@@ -881,7 +903,11 @@ const CakeCatalog = () => {
                     </div>
                     <div className="flex justify-between text-sm text-[#754B45]/70">
                       <span>₱0</span>
+<<<<<<< HEAD
                       <span className="font-semibold text-patisserie-rose-strong">{formatPrice(price)}</span>
+=======
+                      <span className="font-semibold text-[#AF524D]">₱{price}</span>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                     </div>
                   </div>
 
@@ -925,7 +951,11 @@ const CakeCatalog = () => {
                     </label>
                     <select
                       id="tier"
+<<<<<<< HEAD
                       className="w-full rounded-xl border border-[#754B45]/15 bg-[#FFF9F5] px-4 py-3 text-[#754B45] transition-colors focus:border-[#754B45] focus:outline-none focus:ring-2 focus:ring-[#754B45]/20"
+=======
+                      className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220]"
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                       value={tier}
                       onChange={(e) => setTier(e.target.value)}
                     >
@@ -943,6 +973,7 @@ const CakeCatalog = () => {
           {/* Main Content */}
           <main className="flex-1">
             {/* Results Header */}
+<<<<<<< HEAD
             <div className="rounded-2xl border border-[#754B45]/10 bg-white p-5 shadow-sm sm:p-6">
               <div className="text-center">
                 <h3 className="text-xl font-abhaya font-bold text-[#754B45] mb-2">
@@ -955,6 +986,16 @@ const CakeCatalog = () => {
                     Showing {indexOfFirstCake + 1} to {Math.min(indexOfLastCake, filteredCakes.length)} of {filteredCakes.length} results
                   </p>
                 )}
+=======
+            <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/20 p-6 mb-6">
+              <div className="text-center">
+                <h3 className="text-xl font-abhaya font-bold text-[#492220] mb-2">
+                  {filteredCakes.length} Cakes Found
+                </h3>
+                <p className="text-[#492220]/70">
+                  Showing {indexOfFirstCake + 1} to {Math.min(indexOfLastCake, filteredCakes.length)} of {filteredCakes.length} results
+                </p>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
               </div>
             </div>
 
@@ -965,6 +1006,7 @@ const CakeCatalog = () => {
                 Array.from({ length: cakesPerPage }, (_, index) => (
                   <CakeCardSkeleton key={`skeleton-${index}`} />
                 ))
+<<<<<<< HEAD
               ) : loadError ? (
                 <div className="col-span-full rounded-2xl border border-[#754B45]/10 bg-white px-6 py-12 text-center text-[#754B45]" role="alert">
                   We couldn&apos;t connect to the cake catalog. Please try again in a moment.
@@ -985,27 +1027,37 @@ const CakeCatalog = () => {
                     Clear filters
                   </button>
                 </div>
+=======
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
               ) : (
                 // Show actual cake cards
                 currentCakes.map((cake) => (
-                  <button
+                  <div
                     key={cake.cake_id}
-                    type="button"
+                    className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/20 p-6 text-center cursor-pointer hover:shadow-2xl transition-all duration-300 hover:scale-105 transform group"
                     onClick={() => handleCakeClick(cake)}
+<<<<<<< HEAD
                     aria-label={`View details for ${cake.name}`}
                     className="group flex h-full w-full flex-col rounded-2xl border border-[#754B45]/10 bg-white p-3 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#754B45]"
                   >
                     <div className="mb-3 w-full overflow-hidden rounded-xl bg-[#F5E5E2]">
                       <img
                         src={cake.publicUrl || fallbackImages[cake.cake_id % fallbackImages.length]}
+=======
+                  >
+                    <div className="relative mb-4 overflow-hidden rounded-xl">
+                      <img
+                        src={cake.publicUrl}
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                         alt={cake.name}
-                        loading="lazy"
-                        className="aspect-[4/3] w-full object-contain p-2 transition-transform duration-300 group-hover:scale-[1.03]"
+                        className="w-full h-48 object-contain group-hover:scale-110 transition-transform duration-300"
                         onError={(e) => {
-                          e.currentTarget.src = "/saved-cake.png";
+                          e.target.src = "/saved-cake.png";
                         }}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
+<<<<<<< HEAD
                     <h3 className="mb-1 line-clamp-2 min-h-12 text-base font-semibold leading-6 text-[#754B45] group-hover:text-[#754B45]">
                       {cake.name}
                     </h3>
@@ -1022,6 +1074,21 @@ const CakeCatalog = () => {
                       View details <span aria-hidden="true">→</span>
                     </span>
                   </button>
+=======
+                    <h3 className="text-lg font-semibold text-[#492220] mb-2 group-hover:text-[#AF524D] transition-colors">
+                      {cake.name}
+                    </h3>
+                    <p className="text-xl font-bold text-[#AF524D] mb-3">₱{cake.price}</p>
+                    <div className="flex items-center justify-center gap-2 text-sm text-[#492220]/70">
+                      <span className="bg-[#AF524D]/10 text-[#AF524D] px-2 py-1 rounded-full">
+                        {cake.tier} Tier
+                      </span>
+                      <span className="bg-[#DFAD56]/10 text-[#8B3A3A] px-2 py-1 rounded-full">
+                        {cake.theme}
+                      </span>
+                    </div>
+                  </div>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                 ))
               )}
             </div>
@@ -1123,9 +1190,15 @@ const CakeCatalog = () => {
                       <span className="font-medium text-[#754B45]">Tiers:</span>
                       <span className="text-[#754B45] font-semibold">{selectedCake.tier}</span>
                     </div>
+<<<<<<< HEAD
                     <div className="flex items-center justify-between p-3 bg-patisserie-blush rounded-xl">
                       <span className="font-medium text-[#754B45]">Price:</span>
                       <span className="text-patisserie-rose-strong font-bold text-xl">{formatPrice(selectedCake.price)}</span>
+=======
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl">
+                      <span className="font-medium text-[#492220]">Price:</span>
+                      <span className="text-[#AF524D] font-bold text-xl">₱{selectedCake.price}</span>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                     </div>
                   </div>
                 </div>
@@ -1232,8 +1305,13 @@ const CakeCatalog = () => {
                     }}
                   />
                   <div>
+<<<<<<< HEAD
                     <h3 className="font-semibold text-[#754B45] text-lg">{selectedCake.name}</h3>
                     <p className="text-patisserie-rose-strong font-bold text-xl">{formatPrice(selectedCake.price)}</p>
+=======
+                    <h3 className="font-semibold text-[#492220] text-lg">{selectedCake.name}</h3>
+                    <p className="text-[#AF524D] font-bold text-xl">₱{selectedCake.price}</p>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                     <div className="flex gap-2 mt-1">
                       <span className="bg-[#D98F91]/10 text-patisserie-rose-strong px-2 py-1 rounded-full text-xs">
                         {selectedCake.tier} Tier
@@ -1673,12 +1751,21 @@ const CakeCatalog = () => {
                         <span className="text-[#754B45] font-semibold">{cakeQuantity}</span>
                       </div>
                       <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
+<<<<<<< HEAD
                         <span className="font-medium text-[#754B45]">Price per cake:</span>
                         <span className="text-patisserie-rose-strong font-semibold">{formatPrice(selectedCake.price)}</span>
                       </div>
                       <div className="flex justify-between items-center p-4 bg-patisserie-blush rounded-xl border-t-2 border-[#D98F91]/20">
                         <span className="font-bold text-[#754B45] text-lg">Total Price:</span>
                         <span className="font-bold text-patisserie-rose-strong text-xl">{formatPrice(selectedCake.price * cakeQuantity)}</span>
+=======
+                        <span className="font-medium text-[#492220]">Price per cake:</span>
+                        <span className="text-[#AF524D] font-semibold">₱{selectedCake.price}</span>
+                      </div>
+                      <div className="flex justify-between items-center p-4 bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl border-t-2 border-[#AF524D]/20">
+                        <span className="font-bold text-[#492220] text-lg">Total Price:</span>
+                        <span className="font-bold text-[#AF524D] text-xl">₱{selectedCake.price * cakeQuantity}</span>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                       </div>
                       <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
                         <span className="font-medium text-[#754B45]">Date:</span>
@@ -1771,7 +1858,7 @@ const CakeCatalog = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-green-800 font-medium">Total Amount:</span>
-                          <span className="text-green-800 font-semibold text-lg">{formatPrice(selectedCake.price * cakeQuantity)}</span>
+                          <span className="text-green-800 font-semibold text-lg">₱{(selectedCake.price * cakeQuantity).toLocaleString()}</span>
                         </div>
                       </div>
                     </div>

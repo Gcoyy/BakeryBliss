@@ -635,8 +635,13 @@ const Cart = () => {
             <div className="min-h-screen bg-patisserie-vanilla py-8">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-8">
+<<<<<<< HEAD
                         <h1 className="text-4xl font-bold text-[#754B45] mb-2">My Orders</h1>
                         <p className="text-[#754B45] opacity-80">Track upcoming and past cake orders</p>
+=======
+                        <h1 className="text-4xl font-bold text-[#381914] mb-2">My Account</h1>
+                        <p className="text-[#381914] opacity-80">Manage your cart and view your orders</p>
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                     </div>
 
                     <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
@@ -663,6 +668,7 @@ const Cart = () => {
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-8">
+<<<<<<< HEAD
                     <h1 className="text-4xl font-bold text-[#754B45] mb-2">My Orders</h1>
                     <p className="text-[#754B45] opacity-80">Track upcoming and past cake orders</p>
                 </div>
@@ -670,46 +676,71 @@ const Cart = () => {
                 {/* Tab Navigation */}
                 <div className="mb-8 overflow-x-auto pb-2">
                     <div role="group" aria-label="Order status" className="mx-auto flex w-max min-w-full gap-1 rounded-xl border border-[#754B45]/10 bg-white p-1 shadow-sm md:min-w-0">
+=======
+                    <h1 className="text-4xl font-bold text-[#381914] mb-2">My Account</h1>
+                    <p className="text-[#381914] opacity-80">Manage your cart and view your orders</p>
+                </div>
+
+                {/* Tab Navigation */}
+                <div className="flex justify-center mb-8">
+                    <div className="bg-white rounded-lg p-1 shadow-lg">
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                         <button
-                            type="button"
-                            aria-pressed={activeTab === 'toPay'}
                             onClick={() => setActiveTab('toPay')}
+<<<<<<< HEAD
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toPay'
                                 ? 'bg-patisserie-rose-strong text-white'
                                 : 'text-[#754B45] hover:bg-gray-100'
+=======
+                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'toPay'
+                                ? 'bg-[#AF524D] text-white'
+                                : 'text-[#381914] hover:bg-gray-100'
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                                 }`}
                         >
                             To Pay ({orders.filter(order => order.order_status === 'Pending').length})
                         </button>
                         <button
-                            type="button"
-                            aria-pressed={activeTab === 'toReceive'}
                             onClick={() => setActiveTab('toReceive')}
+<<<<<<< HEAD
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'toReceive'
                                 ? 'bg-patisserie-rose-strong text-white'
                                 : 'text-[#754B45] hover:bg-gray-100'
+=======
+                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'toReceive'
+                                ? 'bg-[#AF524D] text-white'
+                                : 'text-[#381914] hover:bg-gray-100'
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                                 }`}
                         >
                             To Receive ({orders.filter(order => order.order_status === 'Approved').length})
                         </button>
                         <button
-                            type="button"
-                            aria-pressed={activeTab === 'completed'}
                             onClick={() => setActiveTab('completed')}
+<<<<<<< HEAD
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'completed'
                                 ? 'bg-patisserie-rose-strong text-white'
                                 : 'text-[#754B45] hover:bg-gray-100'
+=======
+                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'completed'
+                                ? 'bg-[#AF524D] text-white'
+                                : 'text-[#381914] hover:bg-gray-100'
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                                 }`}
                         >
                             Completed ({orders.filter(order => order.order_status === 'Delivered').length})
                         </button>
                         <button
-                            type="button"
-                            aria-pressed={activeTab === 'cancelled'}
                             onClick={() => setActiveTab('cancelled')}
+<<<<<<< HEAD
                             className={`min-h-11 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:px-6 ${activeTab === 'cancelled'
                                 ? 'bg-patisserie-rose-strong text-white'
                                 : 'text-[#754B45] hover:bg-gray-100'
+=======
+                            className={`px-6 py-3 rounded-md font-medium transition-colors ${activeTab === 'cancelled'
+                                ? 'bg-[#AF524D] text-white'
+                                : 'text-[#381914] hover:bg-gray-100'
+>>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
                                 }`}
                         >
                             Cancelled ({orders.filter(order => order.order_status === 'Cancelled').length})
