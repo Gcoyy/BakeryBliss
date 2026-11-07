@@ -6,6 +6,11 @@ const CakeCollection = () => {
   const [cakes, setCakes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const fallbackImages = [
+    "/images/vintage-heart-cake.png",
+    "/images/chocolate-ganache-cake.png",
+    "/images/pastel-cupcakes.png",
+  ];
 
   useEffect(() => {
     let isMounted = true;
@@ -30,7 +35,7 @@ const CakeCollection = () => {
                 ? cake.cake_img.startsWith("http")
                   ? cake.cake_img
                   : supabase.storage.from("cake").getPublicUrl(cake.cake_img).data.publicUrl
-                : "/saved-cake.png",
+                : fallbackImages[index % fallbackImages.length],
             }))
           );
         }
@@ -115,7 +120,7 @@ const CakeCollection = () => {
           </div>
         ) : (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {cakes.map((cake) => (
+            {cakes.map((cake, index) => (
               <Link
                 key={cake.cake_id}
                 to="/cakecatalog"
@@ -130,7 +135,7 @@ const CakeCollection = () => {
                     loading="lazy"
                     className="aspect-[4/3] w-full object-contain transition-transform duration-300 group-hover:scale-[1.03]"
                     onError={(event) => {
-                      event.currentTarget.src = "/saved-cake.png";
+                      event.currentTarget.src = fallbackImages[cake.cake_id % fallbackImages.length];
                     }}
                   />
                 </div>
