@@ -194,7 +194,7 @@ const CakeCatalog = () => {
 
   // Skeleton component for loading cards
   const CakeCardSkeleton = () => (
-    <div className="bg-white/90 rounded-[1.5rem] shadow-[0_18px_50px_rgba(117,75,69,0.1)] border border-patisserie-blush/40 p-6 text-center animate-pulse">
+    <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/20 p-6 text-center animate-pulse">
       <div className="relative mb-4 overflow-hidden rounded-xl">
         <div className="w-full h-48 bg-gray-300 rounded-xl"></div>
       </div>

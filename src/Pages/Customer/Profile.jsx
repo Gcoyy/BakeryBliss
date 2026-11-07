@@ -328,7 +328,7 @@ const Profile = () => {
 
   return (
     <section className="flex min-h-screen flex-col items-center justify-center bg-patisserie-vanilla px-4 py-10 md:px-10 md:py-20">
-      <div className="w-full max-w-4xl overflow-hidden rounded-[2rem] border border-patisserie-blush/70 bg-white shadow-[0_24px_70px_rgba(117,75,69,0.14)]">
+      <div className="w-full max-w-4xl overflow-hidden rounded-3xl border border-patisserie-blush bg-white shadow-lg">
 
         {/* Header Section */}
         <div className="bg-patisserie-rose-strong p-8 relative overflow-hidden">
