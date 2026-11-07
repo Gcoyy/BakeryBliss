@@ -70,25 +70,25 @@ const CakeCustomization = () => {
         style.textContent = `
             .custom-scrollbar {
                 scrollbar-width: thin;
-                scrollbar-color: #D98F91 #E8CDAA;
+                scrollbar-color: #AF524D #F8E6B4;
             }
             .custom-scrollbar::-webkit-scrollbar {
                 width: 8px;
             }
             .custom-scrollbar::-webkit-scrollbar-track {
-                background: #E8CDAA;
+                background: #F8E6B4;
                 border-radius: 4px;
             }
             .custom-scrollbar::-webkit-scrollbar-thumb {
-                background: #D98F91;
+                background: #AF524D;
                 border-radius: 4px;
                 cursor: pointer;
             }
             .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                background: #754B45;
+                background: #8B3A3A;
             }
             .custom-scrollbar::-webkit-scrollbar-thumb:active {
-                background: #754B45;
+                background: #6B2A2A;
             }
         `;
         document.head.appendChild(style);
@@ -2012,12 +2012,12 @@ const CakeCustomization = () => {
     return (
         <div className="h-screen flex flex-col bg-gray-50">
             {/* Top Toolbar - Bakery Theme */}
-            <div className="bg-patisserie-blush border-b border-[#D98F91]/20 px-6 py-4 relative overflow-hidden">
+            <div className="bg-gradient-to-r from-[#F8E6B4] to-[#E2D2A2] border-b border-[#AF524D]/20 px-6 py-4 relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-2 left-20 w-12 h-12 bg-[#D98F91] rounded-full blur-xl"></div>
-                    <div className="absolute top-2 right-20 w-16 h-16 bg-[#E8CDAA] rounded-full blur-xl"></div>
-                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#E8CDAA] rounded-full blur-2xl"></div>
+                    <div className="absolute top-2 left-20 w-12 h-12 bg-[#AF524D] rounded-full blur-xl"></div>
+                    <div className="absolute top-2 right-20 w-16 h-16 bg-[#DFAD56] rounded-full blur-xl"></div>
+                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#E2D2A2] rounded-full blur-2xl"></div>
                 </div>
 
                 <div className="relative z-10 flex items-center justify-between">
@@ -2025,26 +2025,26 @@ const CakeCustomization = () => {
                     <div className="flex items-center space-x-6">
                         {/* Logo and Title */}
                         <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-patisserie-rose rounded-xl flex items-center justify-center shadow-lg">
+                            <div className="w-10 h-10 bg-gradient-to-br from-[#AF524D] to-[#8B3A3A] rounded-xl flex items-center justify-center shadow-lg">
                                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div>
-                                <h1 className="text-xl font-abhaya font-bold text-[#754B45]">Cake Designer</h1>
-                                <p className="text-xs text-[#754B45]/70">Create your perfect cake</p>
+                                <h1 className="text-xl font-abhaya font-bold text-[#492220]">Cake Designer</h1>
+                                <p className="text-xs text-[#492220]/70">Create your perfect cake</p>
                             </div>
                         </div>
 
-                        <div className="h-8 w-px bg-[#D98F91]/30"></div>
+                        <div className="h-8 w-px bg-[#AF524D]/30"></div>
 
                         {/* Scroll Lock Toggle */}
-                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#D98F91]/20">
+                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#AF524D]/20">
                             <button
                                 onClick={() => setIsScrollLocked(!isScrollLocked)}
                                 className={`p-2 rounded-lg transition-all duration-200 ${isScrollLocked
                                     ? 'bg-red-100 text-red-600 border border-red-200'
-                                    : 'text-[#754B45] hover:bg-[#D98F91]/10'
+                                    : 'text-[#492220] hover:bg-[#AF524D]/10'
                                     }`}
                                 title={isScrollLocked ? "Unlock Scrolling" : "Lock Scrolling"}
                             >
@@ -2058,15 +2058,15 @@ const CakeCustomization = () => {
                             </button>
                         </div>
 
-                        <div className="h-8 w-px bg-[#D98F91]/30"></div>
+                        <div className="h-8 w-px bg-[#AF524D]/30"></div>
 
                         {/* Tool Selection */}
-                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#D98F91]/20 flex items-center space-x-1">
+                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#AF524D]/20 flex items-center space-x-1">
                             <button
                                 onClick={() => setSelectedTool('select')}
                                 className={`p-2 rounded-lg transition-all duration-200 ${selectedTool === 'select'
-                                    ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                    : 'text-[#754B45] hover:bg-[#D98F91]/10'
+                                    ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                    : 'text-[#492220] hover:bg-[#AF524D]/10'
                                     }`}
                                 title="Select Tool (V)"
                             >
@@ -2077,8 +2077,8 @@ const CakeCustomization = () => {
                             <button
                                 onClick={() => setSelectedTool('text')}
                                 className={`p-2 rounded-lg transition-all duration-200 ${selectedTool === 'text'
-                                    ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                    : 'text-[#754B45] hover:bg-[#D98F91]/10'
+                                    ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                    : 'text-[#492220] hover:bg-[#AF524D]/10'
                                     }`}
                                 title="Text Tool (T)"
                             >
@@ -2092,10 +2092,10 @@ const CakeCustomization = () => {
                     {/* Right Section - Actions */}
                     <div className="flex items-center space-x-3">
                         {/* Size Controls */}
-                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#D98F91]/20 flex items-center space-x-1">
+                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#AF524D]/20 flex items-center space-x-1">
                             <button
                                 onClick={() => changeSize(0.8)}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Decrease Size"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2104,7 +2104,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={() => changeSize(1.2)}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Increase Size"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2113,13 +2113,13 @@ const CakeCustomization = () => {
                             </button>
                         </div>
 
-                        <div className="h-8 w-px bg-[#D98F91]/30"></div>
+                        <div className="h-8 w-px bg-[#AF524D]/30"></div>
 
                         {/* Layer Controls */}
-                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#D98F91]/20 flex items-center space-x-1">
+                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-2 border border-[#AF524D]/20 flex items-center space-x-1">
                             <button
                                 onClick={bringToFront}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Bring to Front"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2128,7 +2128,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={sendToBack}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Send to Back"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2137,7 +2137,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={bringForward}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Bring Forward"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2146,7 +2146,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={sendBackward}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200"
                                 title="Send Backward"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2155,7 +2155,7 @@ const CakeCustomization = () => {
                             </button>
                         </div>
 
-                        <div className="h-8 w-px bg-[#D98F91]/30"></div>
+                        <div className="h-8 w-px bg-[#AF524D]/30"></div>
 
                         {/* Action Buttons */}
                         <div className="flex items-center space-x-2">
@@ -2170,7 +2170,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={clearCanvas}
-                                className="p-2 text-[#754B45] hover:bg-[#D98F91]/10 rounded-lg transition-all duration-200 border border-[#D98F91]/20 hover:border-[#D98F91]/30"
+                                className="p-2 text-[#492220] hover:bg-[#AF524D]/10 rounded-lg transition-all duration-200 border border-[#AF524D]/20 hover:border-[#AF524D]/30"
                                 title="Clear Canvas"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2179,7 +2179,7 @@ const CakeCustomization = () => {
                             </button>
                             <button
                                 onClick={exportDesign}
-                                className="px-4 py-2 bg-patisserie-rose-strong text-white text-sm font-semibold rounded-xl hover:bg-patisserie-cocoa transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                                className="px-4 py-2 bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white text-sm font-semibold rounded-xl hover:from-[#8B3A3A] hover:to-[#AF524D] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                                 title="Save Design"
                             >
                                 Save Design
@@ -2192,17 +2192,17 @@ const CakeCustomization = () => {
             {/* Main Content Area */}
             <div className="flex-1 flex min-h-0 overflow-hidden">
                 {/* Left Sidebar - Tools Panel */}
-                <div className="w-80 bg-patisserie-vanilla border-r border-[#D98F91]/20 flex flex-col overflow-hidden relative">
+                <div className="w-80 bg-gradient-to-br from-[#F8E6B4] to-[#E2D2A2] border-r border-[#AF524D]/20 flex flex-col overflow-hidden relative">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-5 pointer-events-none">
-                        <div className="absolute top-10 left-10 w-16 h-16 bg-[#D98F91] rounded-full blur-2xl"></div>
-                        <div className="absolute bottom-10 right-10 w-20 h-20 bg-[#E8CDAA] rounded-full blur-2xl"></div>
+                        <div className="absolute top-10 left-10 w-16 h-16 bg-[#AF524D] rounded-full blur-2xl"></div>
+                        <div className="absolute bottom-10 right-10 w-20 h-20 bg-[#DFAD56] rounded-full blur-2xl"></div>
                     </div>
 
                     {/* Text Controls */}
                     {selectedTool === 'text' && (
-                        <div className="p-6 border-b border-[#D98F91]/20 relative z-10 max-h-[60vh] overflow-y-auto custom-scrollbar">
-                            <div className="bg-patisserie-rose-strong rounded-2xl p-4 text-center relative overflow-hidden mb-6">
+                        <div className="p-6 border-b border-[#AF524D]/20 relative z-10 max-h-[60vh] overflow-y-auto custom-scrollbar">
+                            <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] rounded-2xl p-4 text-center relative overflow-hidden mb-6">
                                 <div className="absolute inset-0 bg-black/10"></div>
                                 <div className="relative z-10">
                                     <div className="w-10 h-10 mx-auto mb-2 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -2215,18 +2215,18 @@ const CakeCustomization = () => {
                                 </div>
                             </div>
                             <div className="space-y-4">
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <label className="block text-sm font-semibold text-[#754B45] mb-2">Text Content</label>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <label className="block text-sm font-semibold text-[#492220] mb-2">Text Content</label>
                                     <input
                                         type="text"
                                         value={textValue}
                                         onChange={(e) => setTextValue(e.target.value)}
-                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
+                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
                                         placeholder="Enter text..."
                                     />
                                 </div>
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <label className="block text-sm font-semibold text-[#754B45] mb-3">Font Size</label>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <label className="block text-sm font-semibold text-[#492220] mb-3">Font Size</label>
                                     <div className="space-y-3">
                                         <input
                                             type="range"
@@ -2234,22 +2234,22 @@ const CakeCustomization = () => {
                                             max="72"
                                             value={fontSize}
                                             onChange={(e) => setFontSize(parseInt(e.target.value))}
-                                            className="w-full h-2 bg-[#D98F91]/20 rounded-lg appearance-none cursor-pointer slider-design"
+                                            className="w-full h-2 bg-[#AF524D]/20 rounded-lg appearance-none cursor-pointer slider-design"
                                             style={{
-                                                background: `linear-gradient(to right, #D98F91 0%, #D98F91 ${((fontSize - 12) / (72 - 12)) * 100}%, #E5E7EB ${((fontSize - 12) / (72 - 12)) * 100}%, #E5E7EB 100%)`
+                                                background: `linear-gradient(to right, #AF524D 0%, #AF524D ${((fontSize - 12) / (72 - 12)) * 100}%, #E5E7EB ${((fontSize - 12) / (72 - 12)) * 100}%, #E5E7EB 100%)`
                                             }}
                                         />
-                                        <div className="bg-patisserie-blush rounded-xl px-4 py-2 border border-[#D98F91]/20">
-                                            <div className="text-sm font-semibold text-[#754B45] text-center">{fontSize}px</div>
+                                        <div className="bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl px-4 py-2 border border-[#AF524D]/20">
+                                            <div className="text-sm font-semibold text-[#492220] text-center">{fontSize}px</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <label className="block text-sm font-semibold text-[#754B45] mb-2">Font Family</label>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <label className="block text-sm font-semibold text-[#492220] mb-2">Font Family</label>
                                     <select
                                         value={fontFamily}
                                         onChange={(e) => setFontFamily(e.target.value)}
-                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45]"
+                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220]"
                                         style={{ fontFamily: fontFamily }}
                                     >
                                         <option value="Poppins" style={{ fontFamily: 'Poppins, sans-serif' }}>Poppins</option>
@@ -2263,7 +2263,7 @@ const CakeCustomization = () => {
                                 </div>
                                 <button
                                     onClick={addText}
-                                    className="w-full px-4 py-3 bg-patisserie-rose-strong text-white text-sm font-semibold rounded-xl hover:bg-patisserie-cocoa transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                                    className="w-full px-4 py-3 bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white text-sm font-semibold rounded-xl hover:from-[#8B3A3A] hover:to-[#AF524D] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                                 >
                                     Add Text to Canvas
                                 </button>
@@ -2275,14 +2275,14 @@ const CakeCustomization = () => {
                     <div className="flex-1 overflow-y-auto min-h-0 relative z-10 custom-scrollbar">
                         {/* Asset Type Tabs */}
                         <div className="p-6 pb-4 relative z-10">
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                <h3 className="text-lg font-abhaya font-bold text-[#754B45] mb-4 text-center">Design Assets</h3>
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                <h3 className="text-lg font-abhaya font-bold text-[#492220] mb-4 text-center">Design Assets</h3>
                                 <div className="grid grid-cols-1 gap-2">
                                     <button
                                         onClick={() => setSelectedAssetType('cake base')}
                                         className={`py-3 px-4 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 ${selectedAssetType === 'cake base'
-                                            ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                            : 'bg-white/50 text-[#754B45] hover:bg-[#D98F91]/10 hover:border-[#D98F91] border border-[#D98F91]/20'
+                                            ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                            : 'bg-white/50 text-[#492220] hover:bg-[#AF524D]/10 hover:border-[#AF524D] border border-[#AF524D]/20'
                                             }`}
                                     >
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2293,8 +2293,8 @@ const CakeCustomization = () => {
                                     <button
                                         onClick={() => setSelectedAssetType('icing')}
                                         className={`py-3 px-4 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 ${selectedAssetType === 'icing'
-                                            ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                            : 'bg-white/50 text-[#754B45] hover:bg-[#D98F91]/10 hover:border-[#D98F91] border border-[#D98F91]/20'
+                                            ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                            : 'bg-white/50 text-[#492220] hover:bg-[#AF524D]/10 hover:border-[#AF524D] border border-[#AF524D]/20'
                                             }`}
                                     >
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2305,8 +2305,8 @@ const CakeCustomization = () => {
                                     <button
                                         onClick={() => setSelectedAssetType('topping')}
                                         className={`py-3 px-4 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 ${selectedAssetType === 'topping'
-                                            ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                            : 'bg-white/50 text-[#754B45] hover:bg-[#D98F91]/10 hover:border-[#D98F91] border border-[#D98F91]/20'
+                                            ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                            : 'bg-white/50 text-[#492220] hover:bg-[#AF524D]/10 hover:border-[#AF524D] border border-[#AF524D]/20'
                                             }`}
                                     >
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2321,13 +2321,13 @@ const CakeCustomization = () => {
                         {/* Asset Content */}
                         <div className="px-6 pb-6 relative z-10">
                             {selectedAssetType === 'cake base' && (
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <h3 className="text-lg font-abhaya font-bold text-[#754B45] mb-4 text-center">Cake Bases</h3>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <h3 className="text-lg font-abhaya font-bold text-[#492220] mb-4 text-center">Cake Bases</h3>
                                     {cakeImages.length > 0 ? (
                                         <div className="grid grid-cols-2 gap-3">
                                             {cakeImages.map((cake) => (
                                                 <div key={cake.cake_id} className="group cursor-pointer">
-                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#D98F91]/20 hover:border-[#D98F91] transition-all duration-200">
+                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#AF524D]/20 hover:border-[#AF524D] transition-all duration-200">
                                                         <img
                                                             src={cake.publicUrl}
                                                             alt={cake.name}
@@ -2339,7 +2339,7 @@ const CakeCustomization = () => {
                                                         />
                                                         <button
                                                             onClick={() => addCakeBase(cake)}
-                                                            className="absolute inset-0 bg-gradient-to-t from-[#D98F91]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
+                                                            className="absolute inset-0 bg-gradient-to-t from-[#AF524D]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
                                                         >
                                                             <span className="text-white text-xs font-semibold bg-black/50 px-2 py-1 rounded-lg">Add to Canvas</span>
                                                         </button>
@@ -2349,26 +2349,26 @@ const CakeCustomization = () => {
                                         </div>
                                     ) : (
                                         <div className="text-center py-8">
-                                            <div className="w-16 h-16 mx-auto mb-4 bg-patisserie-blush rounded-2xl flex items-center justify-center">
-                                                <svg className="w-8 h-8 text-patisserie-rose-strong/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#AF524D]/20 to-[#8B3A3A]/20 rounded-2xl flex items-center justify-center">
+                                                <svg className="w-8 h-8 text-[#AF524D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                 </svg>
                                             </div>
-                                            <h4 className="text-lg font-abhaya font-semibold text-[#754B45] mb-2">No Cake Bases</h4>
-                                            <p className="text-sm text-[#754B45]/70">No cake bases available</p>
+                                            <h4 className="text-lg font-abhaya font-semibold text-[#492220] mb-2">No Cake Bases</h4>
+                                            <p className="text-sm text-[#492220]/70">No cake bases available</p>
                                         </div>
                                     )}
                                 </div>
                             )}
 
                             {selectedAssetType === 'icing' && (
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <h3 className="text-lg font-abhaya font-bold text-[#754B45] mb-4 text-center">Icing & Decorations</h3>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <h3 className="text-lg font-abhaya font-bold text-[#492220] mb-4 text-center">Icing & Decorations</h3>
                                     {decorations.length > 0 ? (
                                         <div className="grid grid-cols-2 gap-3">
                                             {decorations.map((decoration) => (
                                                 <div key={decoration.id} className="group cursor-pointer">
-                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#D98F91]/20 hover:border-[#D98F91] transition-all duration-200">
+                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#AF524D]/20 hover:border-[#AF524D] transition-all duration-200">
                                                         <img
                                                             src={getPublicImageUrl(decoration.image_path)}
                                                             alt={decoration.name}
@@ -2380,7 +2380,7 @@ const CakeCustomization = () => {
                                                         />
                                                         <button
                                                             onClick={() => addDecoration(decoration)}
-                                                            className="absolute inset-0 bg-gradient-to-t from-[#D98F91]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
+                                                            className="absolute inset-0 bg-gradient-to-t from-[#AF524D]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
                                                         >
                                                             <span className="text-white text-xs font-semibold bg-black/50 px-2 py-1 rounded-lg">Add to Canvas</span>
                                                         </button>
@@ -2390,26 +2390,26 @@ const CakeCustomization = () => {
                                         </div>
                                     ) : (
                                         <div className="text-center py-8">
-                                            <div className="w-16 h-16 mx-auto mb-4 bg-patisserie-blush rounded-2xl flex items-center justify-center">
-                                                <svg className="w-8 h-8 text-patisserie-rose-strong/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#AF524D]/20 to-[#8B3A3A]/20 rounded-2xl flex items-center justify-center">
+                                                <svg className="w-8 h-8 text-[#AF524D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                                 </svg>
                                             </div>
-                                            <h4 className="text-lg font-abhaya font-semibold text-[#754B45] mb-2">No Decorations</h4>
-                                            <p className="text-sm text-[#754B45]/70">No decorations available</p>
+                                            <h4 className="text-lg font-abhaya font-semibold text-[#492220] mb-2">No Decorations</h4>
+                                            <p className="text-sm text-[#492220]/70">No decorations available</p>
                                         </div>
                                     )}
                                 </div>
                             )}
 
                             {selectedAssetType === 'topping' && (
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <h3 className="text-lg font-abhaya font-bold text-[#754B45] mb-4 text-center">Toppings</h3>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <h3 className="text-lg font-abhaya font-bold text-[#492220] mb-4 text-center">Toppings</h3>
                                     {toppings.length > 0 ? (
                                         <div className="grid grid-cols-2 gap-3">
                                             {toppings.map((topping) => (
                                                 <div key={topping.id} className="group cursor-pointer">
-                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#D98F91]/20 hover:border-[#D98F91] transition-all duration-200">
+                                                    <div className="relative bg-white/50 rounded-xl p-2 border border-[#AF524D]/20 hover:border-[#AF524D] transition-all duration-200">
                                                         <img
                                                             src={getPublicImageUrl(topping.src)}
                                                             alt={topping.name}
@@ -2421,7 +2421,7 @@ const CakeCustomization = () => {
                                                         />
                                                         <button
                                                             onClick={() => addTopping(topping)}
-                                                            className="absolute inset-0 bg-gradient-to-t from-[#D98F91]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
+                                                            className="absolute inset-0 bg-gradient-to-t from-[#AF524D]/80 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-end justify-center pb-2"
                                                         >
                                                             <span className="text-white text-xs font-semibold bg-black/50 px-2 py-1 rounded-lg">Add to Canvas</span>
                                                         </button>
@@ -2431,13 +2431,13 @@ const CakeCustomization = () => {
                                         </div>
                                     ) : (
                                         <div className="text-center py-8">
-                                            <div className="w-16 h-16 mx-auto mb-4 bg-patisserie-blush rounded-2xl flex items-center justify-center">
-                                                <svg className="w-8 h-8 text-patisserie-rose-strong/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#AF524D]/20 to-[#8B3A3A]/20 rounded-2xl flex items-center justify-center">
+                                                <svg className="w-8 h-8 text-[#AF524D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                                                 </svg>
                                             </div>
-                                            <h4 className="text-lg font-abhaya font-semibold text-[#754B45] mb-2">No Toppings</h4>
-                                            <p className="text-sm text-[#754B45]/70">No toppings available</p>
+                                            <h4 className="text-lg font-abhaya font-semibold text-[#492220] mb-2">No Toppings</h4>
+                                            <p className="text-sm text-[#492220]/70">No toppings available</p>
                                         </div>
                                     )}
                                 </div>
@@ -2447,23 +2447,23 @@ const CakeCustomization = () => {
                 </div>
 
                 {/* Canvas Area */}
-                <div className="flex-1 bg-patisserie-vanilla flex items-center justify-center p-6 min-h-0 overflow-hidden relative">
+                <div className="flex-1 bg-gradient-to-br from-[#F8E6B4] to-[#E2D2A2] flex items-center justify-center p-6 min-h-0 overflow-hidden relative">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-5">
-                        <div className="absolute top-20 left-20 w-32 h-32 bg-[#D98F91] rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#E8CDAA] rounded-full blur-3xl"></div>
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E8CDAA] rounded-full blur-3xl"></div>
+                        <div className="absolute top-20 left-20 w-32 h-32 bg-[#AF524D] rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#DFAD56] rounded-full blur-3xl"></div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-[#E2D2A2] rounded-full blur-3xl"></div>
                     </div>
 
                     {/* Floating Elements */}
                     <div className="absolute top-10 left-10 animate-bounce">
-                        <div className="w-6 h-6 bg-[#E8CDAA] rounded-full opacity-60"></div>
+                        <div className="w-6 h-6 bg-[#DFAD56] rounded-full opacity-60"></div>
                     </div>
                     <div className="absolute top-20 right-20 animate-pulse">
-                        <div className="w-4 h-4 bg-[#D98F91] rounded-full opacity-40"></div>
+                        <div className="w-4 h-4 bg-[#AF524D] rounded-full opacity-40"></div>
                     </div>
                     <div className="absolute bottom-20 left-20 animate-bounce delay-1000">
-                        <div className="w-8 h-8 bg-[#E8CDAA] rounded-full opacity-50"></div>
+                        <div className="w-8 h-8 bg-[#E2D2A2] rounded-full opacity-50"></div>
                     </div>
 
                     {/* Canvas Container */}
@@ -2475,22 +2475,22 @@ const CakeCustomization = () => {
                             </div>
 
                             {/* Canvas Footer */}
-                            <div className="bg-patisserie-blush p-3 border-t border-[#D98F91]/20">
-                                <div className="flex items-center justify-center space-x-4 text-sm text-[#754B45]/70">
+                            <div className="bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 p-3 border-t border-[#AF524D]/20">
+                                <div className="flex items-center justify-center space-x-4 text-sm text-[#492220]/70">
                                     <div className="flex items-center space-x-1">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.122 2.122" />
                                         </svg>
                                         <span>Drag & Drop</span>
                                     </div>
-                                    <div className="w-1 h-1 bg-[#D98F91]/30 rounded-full"></div>
+                                    <div className="w-1 h-1 bg-[#AF524D]/30 rounded-full"></div>
                                     <div className="flex items-center space-x-1">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
                                         </svg>
                                         <span>Add Text</span>
                                     </div>
-                                    <div className="w-1 h-1 bg-[#D98F91]/30 rounded-full"></div>
+                                    <div className="w-1 h-1 bg-[#AF524D]/30 rounded-full"></div>
                                     <div className="flex items-center space-x-1">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -2504,16 +2504,16 @@ const CakeCustomization = () => {
                 </div>
 
                 {/* Right Sidebar - Properties Panel */}
-                <div className="w-80 bg-patisserie-vanilla border-l border-[#D98F91]/20 p-6 relative overflow-y-auto max-h-full">
+                <div className="w-80 bg-gradient-to-br from-[#F8E6B4] to-[#E2D2A2] border-l border-[#AF524D]/20 p-6 relative overflow-y-auto max-h-full">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-5">
-                        <div className="absolute top-10 right-10 w-16 h-16 bg-[#D98F91] rounded-full blur-2xl"></div>
-                        <div className="absolute bottom-10 left-10 w-20 h-20 bg-[#E8CDAA] rounded-full blur-2xl"></div>
+                        <div className="absolute top-10 right-10 w-16 h-16 bg-[#AF524D] rounded-full blur-2xl"></div>
+                        <div className="absolute bottom-10 left-10 w-20 h-20 bg-[#DFAD56] rounded-full blur-2xl"></div>
                     </div>
 
                     {/* Header */}
                     <div className="relative z-10 mb-6">
-                        <div className="bg-patisserie-rose-strong rounded-2xl p-4 text-center relative overflow-hidden">
+                        <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] rounded-2xl p-4 text-center relative overflow-hidden">
                             <div className="absolute inset-0 bg-black/10"></div>
                             <div className="relative z-10">
                                 <div className="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -2532,47 +2532,47 @@ const CakeCustomization = () => {
                         <div key={objectUpdateTrigger} className="space-y-6 relative z-10 pb-4">
                             {/* Color Picker - Only show when text object is selected */}
                             {selectedObject.type === 'text' && (
-                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                    <label className="block text-sm font-semibold text-[#754B45] mb-3">Text Color</label>
+                                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                    <label className="block text-sm font-semibold text-[#492220] mb-3">Text Color</label>
                                     <div className="flex flex-col items-center space-y-4">
-                                        <div className="bg-white/50 rounded-xl p-3 border border-[#D98F91]/20 color-picker-container">
+                                        <div className="bg-white/50 rounded-xl p-3 border border-[#AF524D]/20 color-picker-container">
                                             <canvas
                                                 ref={colorWheelRef}
                                                 width="120"
                                                 height="120"
-                                                className="border-2 border-[#D98F91]/30 rounded-xl cursor-pointer shadow-lg"
+                                                className="border-2 border-[#AF524D]/30 rounded-xl cursor-pointer shadow-lg"
                                                 onMouseDown={handleMouseDown}
                                                 title="Click and drag to select color"
                                             />
                                         </div>
-                                        <div className="flex items-center space-x-3 bg-white/50 rounded-xl px-4 py-2 border border-[#D98F91]/20">
-                                            <div className="w-6 h-6 rounded-full border-2 border-[#D98F91]/30" style={{ backgroundColor: selectedColor }}></div>
-                                            <span className="text-sm font-mono text-[#754B45] font-semibold">{selectedColor}</span>
+                                        <div className="flex items-center space-x-3 bg-white/50 rounded-xl px-4 py-2 border border-[#AF524D]/20">
+                                            <div className="w-6 h-6 rounded-full border-2 border-[#AF524D]/30" style={{ backgroundColor: selectedColor }}></div>
+                                            <span className="text-sm font-mono text-[#492220] font-semibold">{selectedColor}</span>
                                         </div>
                                     </div>
                                 </div>
                             )}
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                <label className="block text-sm font-semibold text-[#754B45] mb-2">Object Type</label>
-                                <div className="bg-patisserie-blush rounded-xl px-4 py-3 border border-[#D98F91]/20">
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                <label className="block text-sm font-semibold text-[#492220] mb-2">Object Type</label>
+                                <div className="bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl px-4 py-3 border border-[#AF524D]/20">
                                     <div className="flex items-center space-x-2">
-                                        <div className="w-2 h-2 bg-[#D98F91] rounded-full"></div>
-                                        <span className="text-sm font-semibold text-[#754B45] capitalize">{selectedObject.type}</span>
+                                        <div className="w-2 h-2 bg-[#AF524D] rounded-full"></div>
+                                        <span className="text-sm font-semibold text-[#492220] capitalize">{selectedObject.type}</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                <label className="block text-sm font-semibold text-[#754B45] mb-3">Layer Order</label>
-                                <div className="bg-patisserie-blush rounded-xl px-4 py-3 border border-[#D98F91]/20 mb-4">
-                                    <div className="text-sm font-semibold text-[#754B45] text-center">
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                <label className="block text-sm font-semibold text-[#492220] mb-3">Layer Order</label>
+                                <div className="bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl px-4 py-3 border border-[#AF524D]/20 mb-4">
+                                    <div className="text-sm font-semibold text-[#492220] text-center">
                                         {canvas.current.getObjects().indexOf(selectedObject) + 1} of {canvas.current.getObjects().length}
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-2">
                                     <button
                                         onClick={sendBackward}
-                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#D98F91]/10 border border-[#D98F91]/20 rounded-xl transition-all duration-200 text-[#754B45] font-semibold hover:border-[#D98F91] flex items-center justify-center space-x-1"
+                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#AF524D]/10 border border-[#AF524D]/20 rounded-xl transition-all duration-200 text-[#492220] font-semibold hover:border-[#AF524D] flex items-center justify-center space-x-1"
                                         title="Send Backward"
                                     >
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2582,7 +2582,7 @@ const CakeCustomization = () => {
                                     </button>
                                     <button
                                         onClick={bringForward}
-                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#D98F91]/10 border border-[#D98F91]/20 rounded-xl transition-all duration-200 text-[#754B45] font-semibold hover:border-[#D98F91] flex items-center justify-center space-x-1"
+                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#AF524D]/10 border border-[#AF524D]/20 rounded-xl transition-all duration-200 text-[#492220] font-semibold hover:border-[#AF524D] flex items-center justify-center space-x-1"
                                         title="Bring Forward"
                                     >
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2592,7 +2592,7 @@ const CakeCustomization = () => {
                                     </button>
                                     <button
                                         onClick={sendToBack}
-                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#D98F91]/10 border border-[#D98F91]/20 rounded-xl transition-all duration-200 text-[#754B45] font-semibold hover:border-[#D98F91] flex items-center justify-center space-x-1"
+                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#AF524D]/10 border border-[#AF524D]/20 rounded-xl transition-all duration-200 text-[#492220] font-semibold hover:border-[#AF524D] flex items-center justify-center space-x-1"
                                         title="Send to Back"
                                     >
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2602,7 +2602,7 @@ const CakeCustomization = () => {
                                     </button>
                                     <button
                                         onClick={bringToFront}
-                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#D98F91]/10 border border-[#D98F91]/20 rounded-xl transition-all duration-200 text-[#754B45] font-semibold hover:border-[#D98F91] flex items-center justify-center space-x-1"
+                                        className="px-3 py-2 text-xs bg-white/70 hover:bg-[#AF524D]/10 border border-[#AF524D]/20 rounded-xl transition-all duration-200 text-[#492220] font-semibold hover:border-[#AF524D] flex items-center justify-center space-x-1"
                                         title="Bring to Front"
                                     >
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2614,11 +2614,11 @@ const CakeCustomization = () => {
                             </div>
 
 
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                <label className="block text-sm font-semibold text-[#754B45] mb-3">Size</label>
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                <label className="block text-sm font-semibold text-[#492220] mb-3">Size</label>
                                 <div className="grid grid-cols-2 gap-3">
                                     <div className="space-y-1">
-                                        <label className="block text-xs font-medium text-[#754B45]/70">Width (inches)</label>
+                                        <label className="block text-xs font-medium text-[#492220]/70">Width (inches)</label>
                                         <input
                                             type="number"
                                             step="0.1"
@@ -2631,12 +2631,12 @@ const CakeCustomization = () => {
                                                 canvas.current.renderAll();
                                                 setObjectUpdateTrigger(prev => prev + 1);
                                             }}
-                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
+                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
                                             placeholder="Width (in)"
                                         />
                                     </div>
                                     <div className="space-y-1">
-                                        <label className="block text-xs font-medium text-[#754B45]/70">Height (inches)</label>
+                                        <label className="block text-xs font-medium text-[#492220]/70">Height (inches)</label>
                                         <input
                                             type="number"
                                             step="0.1"
@@ -2649,15 +2649,15 @@ const CakeCustomization = () => {
                                                 canvas.current.renderAll();
                                                 setObjectUpdateTrigger(prev => prev + 1);
                                             }}
-                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
+                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
                                             placeholder="Height (in)"
                                         />
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                <label className="block text-sm font-semibold text-[#754B45] mb-3">Rotation</label>
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                <label className="block text-sm font-semibold text-[#492220] mb-3">Rotation</label>
                                 <div className="space-y-1">
                                     <input
                                         type="number"
@@ -2667,18 +2667,18 @@ const CakeCustomization = () => {
                                             canvas.current.renderAll();
                                             setObjectUpdateTrigger(prev => prev + 1);
                                         }}
-                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
+                                        className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
                                         placeholder="Rotation (degrees)"
                                     />
-                                    <div className="text-xs text-[#754B45]/70 text-center">Degrees (0-360)</div>
+                                    <div className="text-xs text-[#492220]/70 text-center">Degrees (0-360)</div>
                                 </div>
                             </div>
 
 
                             {selectedObject.type === 'text' && (
                                 <>
-                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                        <label className="block text-sm font-semibold text-[#754B45] mb-3">Text Content</label>
+                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                        <label className="block text-sm font-semibold text-[#492220] mb-3">Text Content</label>
                                         <div className="space-y-1">
                                             <input
                                                 type="text"
@@ -2688,15 +2688,15 @@ const CakeCustomization = () => {
                                                     canvas.current.renderAll();
                                                     setObjectUpdateTrigger(prev => prev + 1);
                                                 }}
-                                                className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50"
+                                                className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50"
                                                 placeholder="Enter text..."
                                             />
-                                            <div className="text-xs text-[#754B45]/70 text-center">Edit the text content</div>
+                                            <div className="text-xs text-[#492220]/70 text-center">Edit the text content</div>
                                         </div>
                                     </div>
 
-                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                        <label className="block text-sm font-semibold text-[#754B45] mb-3">Font Family</label>
+                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                        <label className="block text-sm font-semibold text-[#492220] mb-3">Font Family</label>
                                         <select
                                             value={(() => {
                                                 const activeObject = canvas.current?.getActiveObject();
@@ -2714,7 +2714,7 @@ const CakeCustomization = () => {
                                                     }
                                                 }
                                             }}
-                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45]"
+                                            className="w-full px-3 py-2 text-sm bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220]"
                                             style={{
                                                 fontFamily: (() => {
                                                     const activeObject = canvas.current?.getActiveObject();
@@ -2732,8 +2732,8 @@ const CakeCustomization = () => {
                                         </select>
                                     </div>
 
-                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#D98F91]/20">
-                                        <label className="block text-sm font-semibold text-[#754B45] mb-3">Font Size</label>
+                                    <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-[#AF524D]/20">
+                                        <label className="block text-sm font-semibold text-[#492220] mb-3">Font Size</label>
                                         <div className="space-y-3">
                                             <input
                                                 type="range"
@@ -2754,18 +2754,18 @@ const CakeCustomization = () => {
                                                         }
                                                     }
                                                 }}
-                                                className="w-full h-2 bg-[#D98F91]/20 rounded-lg appearance-none cursor-pointer slider-design"
+                                                className="w-full h-2 bg-[#AF524D]/20 rounded-lg appearance-none cursor-pointer slider-design"
                                                 style={{
                                                     background: (() => {
                                                         const activeObject = canvas.current?.getActiveObject();
                                                         const fontSize = activeObject?.type === 'text' ? activeObject.fontSize || 24 : 24;
                                                         const percentage = ((fontSize - 12) / (72 - 12)) * 100;
-                                                        return `linear-gradient(to right, #D98F91 0%, #D98F91 ${percentage}%, #E5E7EB ${percentage}%, #E5E7EB 100%)`;
+                                                        return `linear-gradient(to right, #AF524D 0%, #AF524D ${percentage}%, #E5E7EB ${percentage}%, #E5E7EB 100%)`;
                                                     })()
                                                 }}
                                             />
-                                            <div className="bg-patisserie-blush rounded-xl px-4 py-2 border border-[#D98F91]/20">
-                                                <div className="text-sm font-semibold text-[#754B45] text-center">
+                                            <div className="bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl px-4 py-2 border border-[#AF524D]/20">
+                                                <div className="text-sm font-semibold text-[#492220] text-center">
                                                     {(() => {
                                                         const activeObject = canvas.current?.getActiveObject();
                                                         return activeObject?.type === 'text' ? activeObject.fontSize || 24 : 24;
@@ -2780,14 +2780,14 @@ const CakeCustomization = () => {
                         </div>
                     ) : (
                         <div className="text-center py-12 relative z-10">
-                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-[#D98F91]/20">
-                                <div className="w-16 h-16 mx-auto mb-4 bg-patisserie-blush rounded-2xl flex items-center justify-center">
-                                    <svg className="w-8 h-8 text-patisserie-rose-strong/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-[#AF524D]/20">
+                                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#AF524D]/20 to-[#8B3A3A]/20 rounded-2xl flex items-center justify-center">
+                                    <svg className="w-8 h-8 text-[#AF524D]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.122 2.122" />
                                     </svg>
                                 </div>
-                                <h4 className="text-lg font-abhaya font-semibold text-[#754B45] mb-2">No Object Selected</h4>
-                                <p className="text-sm text-[#754B45]/70">Click on an object to customize its properties</p>
+                                <h4 className="text-lg font-abhaya font-semibold text-[#492220] mb-2">No Object Selected</h4>
+                                <p className="text-sm text-[#492220]/70">Click on an object to customize its properties</p>
                             </div>
                         </div>
                     )}
@@ -2805,7 +2805,7 @@ const CakeCustomization = () => {
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Modal Header */}
-                        <div className="bg-patisserie-rose-strong p-6 text-center relative">
+                        <div className="bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] p-6 text-center relative">
                             <div className="absolute inset-0 bg-black/10"></div>
                             <div className="relative z-10">
                                 <h2 className="text-2xl font-abhaya font-bold text-white mb-2">Complete Your Order</h2>
@@ -2820,30 +2820,30 @@ const CakeCustomization = () => {
                         </div>
 
                         {/* Breadcrumb Navigation */}
-                        <div className="px-6 py-6 bg-[#E8CDAA]/20">
+                        <div className="px-6 py-6 bg-[#F8E6B4]/20">
                             <div className="flex items-center justify-center space-x-4">
-                                <div className={`flex items-center ${currentStep >= 1 ? 'text-patisserie-rose-strong' : 'text-gray-400'}`}>
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 1 ? 'bg-patisserie-rose-strong text-white shadow-lg' : 'bg-gray-200 text-gray-500'
+                                <div className={`flex items-center ${currentStep >= 1 ? 'text-[#AF524D]' : 'text-gray-400'}`}>
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 1 ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg' : 'bg-gray-200 text-gray-500'
                                         }`}>
                                         1
                                     </div>
                                     <span className="ml-3 text-sm font-medium">Order Details</span>
                                 </div>
 
-                                <div className={`w-12 h-1 rounded-full transition-all duration-300 ${currentStep >= 2 ? 'bg-patisserie-rose-strong' : 'bg-gray-200'}`}></div>
+                                <div className={`w-12 h-1 rounded-full transition-all duration-300 ${currentStep >= 2 ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A]' : 'bg-gray-200'}`}></div>
 
-                                <div className={`flex items-center ${currentStep >= 2 ? 'text-patisserie-rose-strong' : 'text-gray-400'}`}>
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 2 ? 'bg-patisserie-rose-strong text-white shadow-lg' : 'bg-gray-200 text-gray-500'
+                                <div className={`flex items-center ${currentStep >= 2 ? 'text-[#AF524D]' : 'text-gray-400'}`}>
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 2 ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg' : 'bg-gray-200 text-gray-500'
                                         }`}>
                                         2
                                     </div>
                                     <span className="ml-3 text-sm font-medium">Review</span>
                                 </div>
 
-                                <div className={`w-12 h-1 rounded-full transition-all duration-300 ${currentStep >= 3 ? 'bg-patisserie-rose-strong' : 'bg-gray-200'}`}></div>
+                                <div className={`w-12 h-1 rounded-full transition-all duration-300 ${currentStep >= 3 ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A]' : 'bg-gray-200'}`}></div>
 
-                                <div className={`flex items-center ${currentStep >= 3 ? 'text-patisserie-rose-strong' : 'text-gray-400'}`}>
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 3 ? 'bg-patisserie-rose-strong text-white shadow-lg' : 'bg-gray-200 text-gray-500'
+                                <div className={`flex items-center ${currentStep >= 3 ? 'text-[#AF524D]' : 'text-gray-400'}`}>
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${currentStep >= 3 ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg' : 'bg-gray-200 text-gray-500'
                                         }`}>
                                         3
                                     </div>
@@ -2855,7 +2855,7 @@ const CakeCustomization = () => {
                         {/* Modal Content */}
                         <div className="p-6">
                             {/* Custom Cake Summary */}
-                            <div className="mb-6 p-4 bg-patisserie-blush rounded-2xl border border-[#D98F91]/20">
+                            <div className="mb-6 p-4 bg-gradient-to-r from-[#F8E6B4]/30 to-[#E2D2A2]/30 rounded-2xl border border-[#AF524D]/20">
                                 <div className="flex items-center gap-4">
                                     <img
                                         src={customCakeImage.dataURL}
@@ -2863,10 +2863,10 @@ const CakeCustomization = () => {
                                         className="w-16 h-16 object-contain rounded-xl shadow-lg"
                                     />
                                     <div>
-                                        <h3 className="font-semibold text-[#754B45] text-lg">Custom Cake Design</h3>
-                                        <p className="text-patisserie-rose-strong font-bold text-xl"> Estimated Price: ₱1,500</p>
+                                        <h3 className="font-semibold text-[#492220] text-lg">Custom Cake Design</h3>
+                                        <p className="text-[#AF524D] font-bold text-xl"> Estimated Price: ₱1,500</p>
                                         <div className="flex gap-2 mt-1">
-                                            <span className="bg-[#D98F91]/10 text-patisserie-rose-strong px-2 py-1 rounded-full text-xs">
+                                            <span className="bg-[#AF524D]/10 text-[#AF524D] px-2 py-1 rounded-full text-xs">
                                                 Custom
                                             </span>
                                         </div>
@@ -2881,27 +2881,27 @@ const CakeCustomization = () => {
 
                                     {/* Date Selection */}
                                     <div className="space-y-3">
-                                        <label className="block text-sm font-semibold text-[#754B45] flex items-center gap-2">
-                                            <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <label className="block text-sm font-semibold text-[#492220] flex items-center gap-2">
+                                            <svg className="w-4 h-4 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
                                             Pickup/Delivery Date *
                                         </label>
                                         <div className="relative">
                                             <div
-                                                className="date-field-container flex items-center gap-3 p-4 bg-white/70 border border-[#D98F91]/20 rounded-xl focus-within:ring-2 focus-within:ring-[#D98F91]/30 focus-within:border-[#D98F91] transition-all duration-200 cursor-pointer"
+                                                className="date-field-container flex items-center gap-3 p-4 bg-white/70 border border-[#AF524D]/20 rounded-xl focus-within:ring-2 focus-within:ring-[#AF524D]/30 focus-within:border-[#AF524D] transition-all duration-200 cursor-pointer"
                                                 onClick={(e) => {
                                                     e.stopPropagation();
                                                     setShowCustomCalendar(!showCustomCalendar);
                                                 }}
                                             >
                                                 <div className="flex-shrink-0">
-                                                    <svg className="w-5 h-5 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className="w-5 h-5 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                     </svg>
                                                 </div>
                                                 <div className="flex-1">
-                                                    <div className="w-full bg-transparent border-none outline-none text-[#754B45] font-medium">
+                                                    <div className="w-full bg-transparent border-none outline-none text-[#492220] font-medium">
                                                         {orderDate ? new Date(orderDate).toLocaleDateString('en-US', {
                                                             weekday: 'long',
                                                             year: 'numeric',
@@ -2911,7 +2911,7 @@ const CakeCustomization = () => {
                                                     </div>
                                                 </div>
                                                 <div className="flex-shrink-0">
-                                                    <svg className={`w-4 h-4 text-patisserie-rose-strong transition-transform duration-200 ${showCustomCalendar ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className={`w-4 h-4 text-[#AF524D] transition-transform duration-200 ${showCustomCalendar ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                 </div>
@@ -2919,7 +2919,7 @@ const CakeCustomization = () => {
 
                                             {/* Custom Calendar Dropdown */}
                                             {showCustomCalendar && (
-                                                <div className="custom-calendar absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-[#D98F91]/20 z-50 p-4">
+                                                <div className="custom-calendar absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-[#AF524D]/20 z-50 p-4">
                                                     {/* 7-day minimum notice */}
                                                     <div className="mb-3 p-2 bg-blue-50 border border-blue-200 rounded-lg">
                                                         <p className="text-xs text-blue-700 text-center">
@@ -2930,20 +2930,20 @@ const CakeCustomization = () => {
                                                     <div className="flex items-center justify-between mb-4">
                                                         <button
                                                             onClick={() => navigateMonth(-1)}
-                                                            className="p-2 hover:bg-[#D98F91]/10 rounded-lg transition-colors duration-200"
+                                                            className="p-2 hover:bg-[#AF524D]/10 rounded-lg transition-colors duration-200"
                                                         >
-                                                            <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                                             </svg>
                                                         </button>
-                                                        <h3 className="text-lg font-semibold text-[#754B45]">
+                                                        <h3 className="text-lg font-semibold text-[#492220]">
                                                             {currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                                                         </h3>
                                                         <button
                                                             onClick={() => navigateMonth(1)}
-                                                            className="p-2 hover:bg-[#D98F91]/10 rounded-lg transition-colors duration-200"
+                                                            className="p-2 hover:bg-[#AF524D]/10 rounded-lg transition-colors duration-200"
                                                         >
-                                                            <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <svg className="w-4 h-4 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                                             </svg>
                                                         </button>
@@ -2952,7 +2952,7 @@ const CakeCustomization = () => {
                                                     {/* Calendar Grid */}
                                                     <div className="grid grid-cols-7 gap-1 mb-2">
                                                         {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                                                            <div key={day} className="p-2 text-center text-sm font-medium text-patisserie-rose-strong">
+                                                            <div key={day} className="p-2 text-center text-sm font-medium text-[#AF524D]">
                                                                 {day}
                                                             </div>
                                                         ))}
@@ -2978,14 +2978,14 @@ const CakeCustomization = () => {
                                                                     onClick={() => handleDateSelect(date)}
                                                                     disabled={isPast || isBlocked || isAtCapacity}
                                                                     className={`p-2 text-sm rounded-lg transition-all duration-200 ${isSelected
-                                                                        ? 'bg-patisserie-rose-strong text-white font-semibold'
+                                                                        ? 'bg-[#AF524D] text-white font-semibold'
                                                                         : isPast
                                                                             ? 'text-gray-300 bg-gray-100 border border-gray-200 cursor-not-allowed'
                                                                             : isBlocked
                                                                                 ? 'text-red-400 bg-red-50 cursor-not-allowed line-through'
                                                                                 : isAtCapacity
                                                                                     ? 'text-orange-400 bg-orange-50 cursor-not-allowed'
-                                                                                    : 'text-[#754B45] hover:bg-[#D98F91]/10 hover:text-patisserie-rose-strong'
+                                                                                    : 'text-[#492220] hover:bg-[#AF524D]/10 hover:text-[#AF524D]'
                                                                         }`}
                                                                 >
                                                                     {date.getDate()}
@@ -3010,7 +3010,7 @@ const CakeCustomization = () => {
                                                                 <span>Full (4 orders)</span>
                                                             </div>
                                                             <div className="flex items-center gap-1">
-                                                                <div className="w-3 h-3 bg-[#D98F91] rounded"></div>
+                                                                <div className="w-3 h-3 bg-[#AF524D] rounded"></div>
                                                                 <span>Selected</span>
                                                             </div>
                                                         </div>
@@ -3020,12 +3020,12 @@ const CakeCustomization = () => {
                                             {orderDate && (
                                                 <div className="mt-3 space-y-2">
                                                     <div className={`p-3 rounded-xl border ${isDateBlockedForCalendar(orderDate)
-                                                        ? 'bg-red-100 border-red-300'
-                                                        : 'bg-patisserie-blush border-[#D98F91]/20'
+                                                        ? 'bg-gradient-to-r from-red-100 to-red-200 border-red-300'
+                                                        : 'bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 border-[#AF524D]/20'
                                                         }`}>
                                                         <p className={`text-sm font-medium ${isDateBlockedForCalendar(orderDate)
                                                             ? 'text-red-700'
-                                                            : 'text-[#754B45]'
+                                                            : 'text-[#492220]'
                                                             }`}>
                                                             Selected: {new Date(orderDate).toLocaleDateString('en-US', {
                                                                 weekday: 'long',
@@ -3075,8 +3075,8 @@ const CakeCustomization = () => {
 
                                     {/* Time Selection */}
                                     <div className="space-y-3">
-                                        <label className="block text-sm font-semibold text-[#754B45] flex items-center gap-2">
-                                            <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <label className="block text-sm font-semibold text-[#492220] flex items-center gap-2">
+                                            <svg className="w-4 h-4 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
                                             Pickup/Delivery Time *
@@ -3098,8 +3098,8 @@ const CakeCustomization = () => {
                                                             type="button"
                                                             onClick={() => setOrderTime(timeSlot)}
                                                             className={`p-3 rounded-xl text-sm font-medium transition-all duration-200 ${orderTime === timeSlot
-                                                                ? 'bg-patisserie-rose-strong text-white shadow-lg'
-                                                                : 'bg-white/70 border border-[#D98F91]/20 text-[#754B45] hover:bg-[#D98F91]/10 hover:border-[#D98F91]/40'
+                                                                ? 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white shadow-lg'
+                                                                : 'bg-white/70 border border-[#AF524D]/20 text-[#492220] hover:bg-[#AF524D]/10 hover:border-[#AF524D]/40'
                                                                 }`}
                                                         >
                                                             {formatTime(timeSlot)}
@@ -3107,8 +3107,8 @@ const CakeCustomization = () => {
                                                     ))}
                                                 </div>
                                                 {orderTime && (
-                                                    <div className="p-3 bg-patisserie-blush rounded-xl border border-[#D98F91]/20">
-                                                        <p className="text-sm text-[#754B45] font-medium">
+                                                    <div className="p-3 bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl border border-[#AF524D]/20">
+                                                        <p className="text-sm text-[#492220] font-medium">
                                                             Selected: {formatTime(orderTime)}
                                                         </p>
                                                     </div>
@@ -3132,30 +3132,30 @@ const CakeCustomization = () => {
 
                                     {/* Order Type */}
                                     <div className="space-y-3">
-                                        <label className="block text-sm font-semibold text-[#754B45] flex items-center gap-2">
-                                            <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <label className="block text-sm font-semibold text-[#492220] flex items-center gap-2">
+                                            <svg className="w-4 h-4 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                             </svg>
                                             Order Type
                                         </label>
                                         <div className="relative">
                                             <div
-                                                className="flex items-center gap-3 p-4 bg-white/70 border border-[#D98F91]/20 rounded-xl cursor-pointer hover:bg-white/90 transition-all duration-200 focus-within:ring-2 focus-within:ring-[#D98F91]/30 focus-within:border-[#D98F91]"
+                                                className="flex items-center gap-3 p-4 bg-white/70 border border-[#AF524D]/20 rounded-xl cursor-pointer hover:bg-white/90 transition-all duration-200 focus-within:ring-2 focus-within:ring-[#AF524D]/30 focus-within:border-[#AF524D]"
                                                 onClick={() => setIsOrderTypeDropdownOpen(!isOrderTypeDropdownOpen)}
                                             >
                                                 <div className="flex-shrink-0">
-                                                    <svg className="w-5 h-5 text-patisserie-rose-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className="w-5 h-5 text-[#AF524D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                                     </svg>
                                                 </div>
                                                 <div className="flex-1">
-                                                    <span className="text-[#754B45] font-medium">
+                                                    <span className="text-[#492220] font-medium">
                                                         {orderType}
                                                     </span>
                                                 </div>
                                                 <div className="flex-shrink-0">
                                                     <svg
-                                                        className={`w-5 h-5 text-patisserie-rose-strong transition-transform duration-200 ${isOrderTypeDropdownOpen ? 'rotate-180' : ''}`}
+                                                        className={`w-5 h-5 text-[#AF524D] transition-transform duration-200 ${isOrderTypeDropdownOpen ? 'rotate-180' : ''}`}
                                                         fill="none"
                                                         stroke="currentColor"
                                                         viewBox="0 0 24 24"
@@ -3167,9 +3167,9 @@ const CakeCustomization = () => {
 
                                             {/* Custom Dropdown */}
                                             {isOrderTypeDropdownOpen && (
-                                                <div className="absolute top-full left-0 right-0 mt-1 bg-white border-2 border-[#D98F91] rounded-lg shadow-lg z-10">
+                                                <div className="absolute top-full left-0 right-0 mt-1 bg-white border-2 border-[#AF524D] rounded-lg shadow-lg z-10">
                                                     <div
-                                                        className="p-3 hover:bg-patisserie-rose-strong hover:text-white cursor-pointer transition-colors border-b border-gray-100"
+                                                        className="p-3 hover:bg-[#AF524D] hover:text-white cursor-pointer transition-colors border-b border-gray-100"
                                                         onClick={() => {
                                                             setOrderType("Pickup");
                                                             setIsOrderTypeDropdownOpen(false);
@@ -3183,7 +3183,7 @@ const CakeCustomization = () => {
                                                         </div>
                                                     </div>
                                                     <div
-                                                        className="p-3 hover:bg-patisserie-rose-strong hover:text-white cursor-pointer transition-colors"
+                                                        className="p-3 hover:bg-[#AF524D] hover:text-white cursor-pointer transition-colors"
                                                         onClick={() => {
                                                             setOrderType("Delivery");
                                                             setIsOrderTypeDropdownOpen(false);
@@ -3200,8 +3200,8 @@ const CakeCustomization = () => {
                                             )}
 
                                             {orderType && (
-                                                <div className="mt-2 p-2 bg-[#D98F91] bg-opacity-10 rounded-lg border border-[#D98F91] border-opacity-30">
-                                                    <p className="text-sm text-[#754B45] font-medium">
+                                                <div className="mt-2 p-2 bg-[#AF524D] bg-opacity-10 rounded-lg border border-[#AF524D] border-opacity-30">
+                                                    <p className="text-sm text-[#381914] font-medium">
                                                         Selected: {orderType}
                                                     </p>
                                                 </div>
@@ -3212,8 +3212,8 @@ const CakeCustomization = () => {
                                     {/* Delivery Address */}
                                     {orderType === "Delivery" && (
                                         <div className="space-y-3">
-                                            <label className="block text-sm font-semibold text-[#754B45] flex items-center gap-2">
-                                                <svg className="w-4 h-4 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <label className="block text-sm font-semibold text-[#492220] flex items-center gap-2">
+                                                <svg className="w-4 h-4 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                 </svg>
@@ -3224,7 +3224,7 @@ const CakeCustomization = () => {
                                                 onChange={(e) => setDeliveryAddress(e.target.value)}
                                                 placeholder="Enter your complete delivery address..."
                                                 rows="3"
-                                                className="w-full px-4 py-3 bg-white/70 border border-[#D98F91]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D98F91]/30 focus:border-[#D98F91] transition-all duration-200 text-[#754B45] placeholder-[#754B45]/50 resize-none"
+                                                className="w-full px-4 py-3 bg-white/70 border border-[#AF524D]/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF524D]/30 focus:border-[#AF524D] transition-all duration-200 text-[#492220] placeholder-[#492220]/50 resize-none"
                                             />
                                         </div>
                                     )}
@@ -3233,7 +3233,7 @@ const CakeCustomization = () => {
                                     <div className="flex flex-col sm:flex-row gap-4 justify-end pt-6">
                                         <button
                                             onClick={closeOrderModal}
-                                            className="px-6 py-3 bg-white/70 text-[#754B45] border border-[#D98F91]/30 rounded-xl hover:bg-[#D98F91]/10 hover:border-[#D98F91]/50 transition-all duration-200 font-semibold"
+                                            className="px-6 py-3 bg-white/70 text-[#492220] border border-[#AF524D]/30 rounded-xl hover:bg-[#AF524D]/10 hover:border-[#AF524D]/50 transition-all duration-200 font-semibold"
                                         >
                                             Cancel
                                         </button>
@@ -3242,7 +3242,7 @@ const CakeCustomization = () => {
                                             disabled={!orderDate || !orderTime || (orderType === "Delivery" && !deliveryAddress) || isDateBlocked || isCheckingBlockedDates || isDateBlockedForCalendar(orderDate)}
                                             className={`px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none ${!orderDate || !orderTime || (orderType === "Delivery" && !deliveryAddress) || isDateBlocked || isCheckingBlockedDates || isDateBlockedForCalendar(orderDate)
                                                 ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-                                                : 'bg-patisserie-rose-strong text-white hover:bg-patisserie-cocoa'
+                                                : 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white hover:from-[#8B3A3A] hover:to-[#AF524D]'
                                                 }`}
                                         >
                                             Next
@@ -3254,63 +3254,63 @@ const CakeCustomization = () => {
                             {/* Step 2: Review Order */}
                             {currentStep === 2 && (
                                 <div className="space-y-6">
-                                    <h3 className="text-lg font-semibold text-[#754B45] mb-4 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <h3 className="text-lg font-semibold text-[#492220] mb-4 flex items-center gap-2">
+                                        <svg className="w-5 h-5 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                         </svg>
                                         Review Your Order
                                     </h3>
 
                                     {/* Order Summary */}
-                                    <div className="p-6 bg-patisserie-blush rounded-2xl border border-[#D98F91]/20">
-                                        <h4 className="font-semibold text-[#754B45] mb-6 text-lg">Order Summary</h4>
+                                    <div className="p-6 bg-gradient-to-r from-[#F8E6B4]/30 to-[#E2D2A2]/30 rounded-2xl border border-[#AF524D]/20">
+                                        <h4 className="font-semibold text-[#492220] mb-6 text-lg">Order Summary</h4>
                                         <div className="space-y-4 text-sm">
                                             <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Cake:</span>
-                                                <span className="text-patisserie-rose-strong font-semibold">Custom Cake Design</span>
+                                                <span className="font-medium text-[#492220]">Cake:</span>
+                                                <span className="text-[#AF524D] font-semibold">Custom Cake Design</span>
                                             </div>
                                             <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Quantity:</span>
-                                                <span className="text-[#754B45] font-semibold">1</span>
+                                                <span className="font-medium text-[#492220]">Quantity:</span>
+                                                <span className="text-[#8B3A3A] font-semibold">1</span>
                                             </div>
                                             <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Estimated price per cake:</span>
-                                                <span className="text-patisserie-rose-strong font-semibold">₱1,500</span>
+                                                <span className="font-medium text-[#492220]">Estimated price per cake:</span>
+                                                <span className="text-[#AF524D] font-semibold">₱1,500</span>
                                             </div>
-                                            <div className="flex justify-between items-center p-4 bg-patisserie-blush rounded-xl border-t-2 border-[#D98F91]/20">
-                                                <span className="font-bold text-[#754B45] text-lg">Total Estimated Price:</span>
-                                                <span className="font-bold text-patisserie-rose-strong text-xl">₱1,500</span>
-                                            </div>
-                                            <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Date:</span>
-                                                <span className="text-[#754B45] font-semibold">{orderDate ? new Date(orderDate).toLocaleDateString() : 'Not selected'}</span>
+                                            <div className="flex justify-between items-center p-4 bg-gradient-to-r from-[#AF524D]/10 to-[#8B3A3A]/10 rounded-xl border-t-2 border-[#AF524D]/20">
+                                                <span className="font-bold text-[#492220] text-lg">Total Estimated Price:</span>
+                                                <span className="font-bold text-[#AF524D] text-xl">₱1,500</span>
                                             </div>
                                             <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Time:</span>
-                                                <span className="text-[#754B45] font-semibold">{orderTime ? new Date(`2000-01-01T${orderTime}`).toLocaleTimeString('en-US', {
+                                                <span className="font-medium text-[#492220]">Date:</span>
+                                                <span className="text-[#8B3A3A] font-semibold">{orderDate ? new Date(orderDate).toLocaleDateString() : 'Not selected'}</span>
+                                            </div>
+                                            <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
+                                                <span className="font-medium text-[#492220]">Time:</span>
+                                                <span className="text-[#8B3A3A] font-semibold">{orderTime ? new Date(`2000-01-01T${orderTime}`).toLocaleTimeString('en-US', {
                                                     hour: 'numeric',
                                                     minute: '2-digit',
                                                     hour12: true
                                                 }) : 'Not selected'}</span>
                                             </div>
                                             <div className="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                                                <span className="font-medium text-[#754B45]">Type:</span>
-                                                <span className="text-[#754B45] font-semibold">{orderType}</span>
+                                                <span className="font-medium text-[#492220]">Type:</span>
+                                                <span className="text-[#8B3A3A] font-semibold">{orderType}</span>
                                             </div>
                                             {orderType === "Delivery" && deliveryAddress && (
                                                 <div className="flex justify-between items-start p-3 bg-white/50 rounded-xl">
-                                                    <span className="font-medium text-[#754B45]">Address:</span>
-                                                    <span className="text-right max-w-xs text-[#754B45] font-semibold">{deliveryAddress}</span>
+                                                    <span className="font-medium text-[#492220]">Address:</span>
+                                                    <span className="text-right max-w-xs text-[#8B3A3A] font-semibold">{deliveryAddress}</span>
                                                 </div>
                                             )}
                                         </div>
                                     </div>
 
                                     {/* Action Buttons */}
-                                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center pt-6 border-t border-[#D98F91]/20">
+                                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center pt-6 border-t border-[#AF524D]/20">
                                         <button
                                             onClick={prevStep}
-                                            className="px-6 py-3 bg-white/70 text-[#754B45] border border-[#D98F91]/30 rounded-xl hover:bg-[#D98F91]/10 hover:border-[#D98F91]/50 transition-all duration-200 font-semibold"
+                                            className="px-6 py-3 bg-white/70 text-[#492220] border border-[#AF524D]/30 rounded-xl hover:bg-[#AF524D]/10 hover:border-[#AF524D]/50 transition-all duration-200 font-semibold"
                                         >
                                             Back
                                         </button>
@@ -3320,7 +3320,7 @@ const CakeCustomization = () => {
                                             disabled={isPlacingOrder}
                                             className={`px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none ${isPlacingOrder
                                                 ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-                                                : 'bg-patisserie-rose-strong text-white hover:bg-patisserie-cocoa'
+                                                : 'bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white hover:from-[#8B3A3A] hover:to-[#AF524D]'
                                                 }`}
                                         >
                                             {isPlacingOrder ? (
@@ -3342,8 +3342,8 @@ const CakeCustomization = () => {
                             {/* Step 3: Order Success */}
                             {currentStep === 3 && (
                                 <div className="space-y-6">
-                                    <h3 className="text-lg font-semibold text-[#754B45] mb-4 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-patisserie-rose-strong" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <h3 className="text-lg font-semibold text-[#492220] mb-4 flex items-center gap-2">
+                                        <svg className="w-5 h-5 text-[#AF524D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                         Order Successfully Placed!
@@ -3351,7 +3351,7 @@ const CakeCustomization = () => {
 
                                     <div className="p-8 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl text-center">
                                         <div className="flex items-center justify-center gap-4 mb-6">
-                                            <div className="w-16 h-16 bg-patisserie-sage rounded-full flex items-center justify-center shadow-lg">
+                                            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
                                                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                 </svg>
@@ -3382,7 +3382,7 @@ const CakeCustomization = () => {
                                     <div className="flex gap-4 justify-center">
                                         <button
                                             onClick={closeOrderModal}
-                                            className="px-8 py-3 bg-patisserie-rose-strong text-white font-semibold rounded-xl hover:bg-patisserie-cocoa transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="px-8 py-3 bg-gradient-to-r from-[#AF524D] to-[#8B3A3A] text-white font-semibold rounded-xl hover:from-[#8B3A3A] hover:to-[#AF524D] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                         >
                                             Done
                                         </button>
