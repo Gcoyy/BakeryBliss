@@ -1,16 +1,19 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { AnimatePresence } from "framer-motion";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
-import CustomerLayout from "./layouts/CustomerLayout";
-import AdminLayout from "./layouts/AdminLayout";
-import AuthLayout from "./layouts/AuthLayout";
+
+/* Customer Routes */
 import SignUp from "./Pages/Customer/SignUp";
 import Home from "./Pages/Customer/Home";
 import Login from "./Pages/Login";
 import ResetPassword from "./Pages/ResetPassword";
 import AboutUs from "./Pages/Customer/AboutUs";
 import ContactUs from "./Pages/Customer/ContactUs";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 import Profile from "./Pages/Customer/Profile";
 import CakeCatalog from "./Pages/Customer/CakeCatalog";
 import RoleBasedRedirect from "./context/RoleBasedRedirect";
@@ -18,6 +21,8 @@ import Cart from "./Pages/Customer/Cart";
 import CakeCustomization from "./Pages/Customer/CakeCustomization";
 import TermsConditions from "./Pages/Terms&Conditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+
+/* Admin Routes */
 import Inventory from "./sections/Inventory";
 import Cakes from "./sections/Cakes";
 import CakeOrders from "./sections/CakeOrders";
@@ -27,63 +32,105 @@ import RecipeManagement from "./sections/RecipeManagement";
 import AssetIngredientManagement from "./sections/AssetIngredientManagement";
 import QRCodeUpload from "./sections/QRCodeUpload";
 import ProtectedRoute from "./context/ProtectedRoute";
+import AdminPage from "./Pages/Admin/AdminPage";
 import AdminProfile from "./Pages/Admin/AdminProfile";
-import ScrollToHashElement from "./components/ScrollToHashElement";
 import useScrollToTop from "./hooks/useScrollToTop";
-
-const transition = (element) => <PageTransition>{element}</PageTransition>;
 
 function AppRoutes() {
   const location = useLocation();
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route element={<AuthLayout />}>
-          <Route path="/signup" element={transition(<SignUp />)} />
-          <Route path="/login" element={transition(<Login />)} />
-          <Route path="/reset-password" element={transition(<ResetPassword />)} />
-        </Route>
+        <Route path="/signup" element={<PageTransition><SignUp /></PageTransition>} />
+        <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
+        <Route path="/reset-password" element={<PageTransition><ResetPassword /></PageTransition>} />
 
-        <Route element={<CustomerLayout />}>
-          <Route path="/home" element={transition(<Home />)} />
-          <Route path="/aboutus" element={transition(<AboutUs />)} />
-          <Route path="/contactus" element={transition(<ContactUs />)} />
-          <Route path="/cakecatalog" element={transition(<CakeCatalog />)} />
-          <Route path="/cart" element={transition(<Cart />)} />
-          <Route path="/cakecustomization" element={transition(<CakeCustomization />)} />
-          <Route path="/terms&conditions" element={transition(<TermsConditions />)} />
-          <Route path="/privacypolicy" element={transition(<PrivacyPolicy />)} />
-          <Route path="/profile" element={<ProtectedRoute allowedRoles={["customer"]}>{transition(<Profile />)}</ProtectedRoute>} />
-        </Route>
-
+        {/* Root path - role-based redirect for logged-in users, Home for guests */}
         <Route path="/" element={<RoleBasedRedirect />} />
+
+        {/* Dashboard route with role-based redirect for logged-in users */}
         <Route path="/dashboard" element={<RoleBasedRedirect />} />
+
+        {/* Public routes */}
+        <Route path="/home" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/aboutus" element={<PageTransition><AboutUs /></PageTransition>} />
+        <Route path="/contactus" element={<PageTransition><ContactUs /></PageTransition>} />
+        <Route path="/cakecatalog" element={<PageTransition><CakeCatalog /></PageTransition>} />
+        <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
+        <Route path="/cakecustomization" element={<PageTransition><CakeCustomization /></PageTransition>} />
+        <Route path="/terms&conditions" element={<PageTransition><TermsConditions /></PageTransition>} />
+        <Route path="/privacypolicy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+
+        {/* Customer-only route */}
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute allowedRoles={["customer"]}>
+              <PageTransition><Profile /></PageTransition>
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Admin-only routes */}
+        <Route
+          path="/adminpage"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AdminPage />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<PageTransition><Inventory /></PageTransition>} />
+          <Route path="inventory" element={<PageTransition><Inventory /></PageTransition>} />
+          <Route path="cakes" element={<PageTransition><Cakes /></PageTransition>} />
+          <Route path="cake orders" element={<PageTransition><CakeOrders /></PageTransition>} />
+          <Route path="custom cake assets" element={<PageTransition><Assets /></PageTransition>} />
+          <Route path="blocked dates" element={<PageTransition><BlockedDates /></PageTransition>} />
+          <Route path="recipe management" element={<PageTransition><RecipeManagement /></PageTransition>} />
+          <Route path="asset ingredient management" element={<PageTransition><AssetIngredientManagement /></PageTransition>} />
+        </Route>
+
+        <Route
+          path="/admin/profile"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <PageTransition><AdminProfile /></PageTransition>
+            </ProtectedRoute>
+          }
+        />
+
+        {/* QR Code Upload route */}
+        <Route
+          path="/qrcodeupload"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <PageTransition><QRCodeUpload /></PageTransition>
+            </ProtectedRoute>
+          }
+        />
+
+        {/* OAuth Redirect Handler */}
         <Route path="/redirect" element={<RoleBasedRedirect />} />
 
-        <Route path="/adminpage" element={<ProtectedRoute allowedRoles={["admin"]}><AdminLayout /></ProtectedRoute>}>
-          <Route index element={transition(<Inventory />)} />
-          <Route path="inventory" element={transition(<Inventory />)} />
-          <Route path="cakes" element={transition(<Cakes />)} />
-          <Route path="cake orders" element={transition(<CakeOrders />)} />
-          <Route path="custom cake assets" element={transition(<Assets />)} />
-          <Route path="blocked dates" element={transition(<BlockedDates />)} />
-          <Route path="recipe management" element={transition(<RecipeManagement />)} />
-          <Route path="asset ingredient management" element={transition(<AssetIngredientManagement />)} />
-        </Route>
-        <Route path="/admin/profile" element={<ProtectedRoute allowedRoles={["admin"]}><AdminLayout /></ProtectedRoute>}>
-          <Route index element={transition(<AdminProfile />)} />
-        </Route>
-        <Route path="/qrcodeupload" element={<ProtectedRoute allowedRoles={["admin"]}><AdminLayout /></ProtectedRoute>}>
-          <Route index element={transition(<QRCodeUpload />)} />
-        </Route>
       </Routes>
     </AnimatePresence>
   );
 }
 
 function App() {
+  // Use the scroll to top hook
   useScrollToTop();
-  return <><Toaster position="top-center" reverseOrder={false} /><AppRoutes /><ScrollToHashElement /></>;
+
+  return (
+    <>
+      <Toaster position="top-center" reverseOrder={false} />
+      <Header />
+      <AppRoutes />
+      <ScrollToHashElement />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

@@ -5,19 +5,14 @@ const Hero = () => (
     id="home"
     className="home-hero relative flex min-h-[600px] h-[min(78svh,780px)] items-center overflow-hidden"
     aria-labelledby="home-heading"
-      style={{
-        backgroundImage: 'url("/images/strawberry-hero.png")',
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundColor: "#453735",
-        backgroundBlendMode: "multiply",
-      }}
+    style={{
+      backgroundImage: 'linear-gradient(90deg, rgba(58,36,33,0.9) 0%, rgba(58,36,33,0.72) 52%, rgba(58,36,33,0.2) 100%), url("/images/strawberry-hero.png")',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundColor: '#3a2421',
+    }}
   >
-    <div
-      className="absolute inset-0"
-      style={{ background: "linear-gradient(90deg, rgba(58,36,33,0.94) 0%, rgba(58,36,33,0.78) 48%, rgba(58,36,33,0.2) 100%)" }}
-      aria-hidden="true"
-    />
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(58,36,33,0.88)_0%,rgba(58,36,33,0.68)_48%,rgba(58,36,33,0.16)_100%)]" aria-hidden="true" />
     <div className="relative mx-auto w-full max-w-[1440px] px-6 py-16 sm:px-10 lg:px-16">
       <div className="max-w-2xl">
         <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-patisserie-buttercream sm:text-sm">
