@@ -187,7 +187,7 @@ input[type="range"]::-moz-range-thumb {
 .home-hero {
   background-image:
     linear-gradient(90deg, rgb(58 36 33 / 82%) 0%, rgb(58 36 33 / 65%) 44%, rgb(58 36 33 / 10%) 100%),
-    url("/images/strawberry-hero.png");
+    url("/Hero.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -197,7 +197,7 @@ input[type="range"]::-moz-range-thumb {
   .home-hero {
     background-image:
     linear-gradient(90deg, rgb(58 36 33 / 84%) 0%, rgb(58 36 33 / 64%) 100%),
-      url("/images/strawberry-hero.png");
+      url("/Hero.png");
     background-position: 63% center;
   }
 }
