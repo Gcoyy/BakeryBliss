@@ -107,9 +107,9 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 z-50 border-b ${
-        isAdmin
+          isAdmin
           ? "border-[#b8941f]/30 bg-[#e6d5aa]"
-          : "border-patisserie-cocoa/10 bg-patisserie-vanilla"
+          : "border-[#f0e5de] bg-patisserie-vanilla/95 backdrop-blur-md"
       }`}
     >
       <div className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
