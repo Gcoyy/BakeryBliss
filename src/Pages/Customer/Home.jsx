@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import Hero from "../../sections/Hero"
 import CakeCustom from "../../sections/CakeCustom"
 import CakeCollection from "../../sections/CakeCollection"
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Hero />
+      <CakeCollection />
       <CakeCustom />
-<<<<<<< HEAD
 
       <section className="border-y border-[#f0e5de] bg-white px-5 py-14 sm:px-8 sm:py-16" aria-label="Our ordering process">
         <div className="mx-auto max-w-7xl">
@@ -61,10 +62,6 @@ const Home = () => {
         </div>
       </section>
     </main>
-=======
-      <CakeCollection />
-    </>
->>>>>>> parent of fc1a11f (Updated web responsiveness and visuals)
   )
 }
 
