@@ -14,7 +14,7 @@ const CakeCustom = () => (
     <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-16">
       <div className="overflow-hidden rounded-3xl bg-patisserie-vanilla">
         <img
-          src="/Section 3.png"
+          src="/images/floral-buttercream-cake.png"
           alt="Colorful two-tier celebration cake with chocolate frosting"
           loading="lazy"
           className="aspect-[4/5] w-full object-contain p-3"

@@ -18,6 +18,13 @@ const getPublicImageUrl = (path) => {
   return supabase.storage.from("cake").getPublicUrl(path).data.publicUrl;
 };
 
+const fallbackImages = [
+  "/images/vintage-heart-cake.png",
+  "/images/floral-buttercream-cake.png",
+  "/images/chocolate-ganache-cake.png",
+  "/images/pastel-cupcakes.png",
+];
+
 const formatPrice = (amount) => `₱${Number(amount).toLocaleString("en-PH")}`;
 
 // Blocked dates utility functions
@@ -990,7 +997,7 @@ const CakeCatalog = () => {
                   >
                     <div className="mb-3 w-full overflow-hidden rounded-xl bg-[#F5E5E2]">
                       <img
-                        src={cake.publicUrl || "/saved-cake.png"}
+                        src={cake.publicUrl || fallbackImages[cake.cake_id % fallbackImages.length]}
                         alt={cake.name}
                         loading="lazy"
                         className="aspect-[4/3] w-full object-contain p-2 transition-transform duration-300 group-hover:scale-[1.03]"
@@ -1089,7 +1096,7 @@ const CakeCatalog = () => {
               {/* Cake Image */}
               <div className="mb-6">
                 <img
-                  src={selectedCake.publicUrl || "/saved-cake.png"}
+                  src={selectedCake.publicUrl || fallbackImages[selectedCake.cake_id % fallbackImages.length]}
                   alt={selectedCake.name}
                   className="w-full h-64 object-contain rounded-2xl shadow-lg"
                   onError={(e) => {
@@ -1217,7 +1224,7 @@ const CakeCatalog = () => {
               <div className="mb-6 p-4 bg-patisserie-blush rounded-2xl border border-[#D98F91]/20">
                 <div className="flex items-center gap-4">
                   <img
-                    src={selectedCake.publicUrl || "/saved-cake.png"}
+                    src={selectedCake.publicUrl || fallbackImages[selectedCake.cake_id % fallbackImages.length]}
                     alt={selectedCake.name}
                     className="w-16 h-16 object-contain rounded-xl shadow-lg"
                     onError={(e) => {
