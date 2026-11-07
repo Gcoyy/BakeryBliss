@@ -1,25 +1,42 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 @theme {
-  --color-patisserie-vanilla: #fff9f5;
-  --color-patisserie-blush: #f5e5e2;
-  --color-patisserie-rose: #d98f91;
-  --color-patisserie-rose-strong: #a45f63;
-  --color-patisserie-cocoa: #754b45;
-  --color-patisserie-buttercream: #e8cdaa;
-  --color-patisserie-sage: #65745b;
+  --color-patisserie-vanilla: #fff9f3;
+  --color-patisserie-blush: #f8dde3;
+  --color-patisserie-rose: #efa9b8;
+  --color-patisserie-rose-strong: #c85b70;
+  --color-patisserie-cocoa: #453735;
+  --color-patisserie-buttercream: #ead0b3;
+  --color-patisserie-sage: #788477;
+}
+
+:root {
+  color: #453735;
+  background: #fff9f3;
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  min-width: 320px;
+  margin: 0;
+  background: #fff9f3;
 }
 
 .font-abhaya {
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .font-jost {
-  font-family: 'Jost', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+}
+
+::selection {
+  background: #f8dde3;
+  color: #453735;
 }
 
 .slider-design {
